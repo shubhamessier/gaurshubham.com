@@ -7,6 +7,13 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    company: "Solsphere AI",
+    role: "Software Development Engineer",
+    duration: "Feb 2025 - Present",
+    description:
+      "Starting Afresh."
+  },
+  {
     company: "Smartdocs Inc",
     role: "Software Development Engineer",
     duration: "Aug 2024 - Nov 2024",
