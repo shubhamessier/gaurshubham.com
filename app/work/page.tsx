@@ -6,16 +6,16 @@ import { EducationSection } from "@/components/work/education-section";
 import { SkillsSection } from "@/components/work/skills-section";
 import { ProjectSection } from "@/components/work/project-section";
 import { AchievementSection } from "@/components/work/achievement-section";
+import { MainLayout } from "@/components/layout/main-layout";
 
 export default function WorkPage() {
   return (
-    <div className="container max-w-[1000px] mx-auto px-6 py-16">
+    <MainLayout>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.0 }}
-        viewport={{ once: true }}
-        className="space-y-16"
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="space-y-8 sm:space-y-12 lg:space-y-16"
       >
         <ExperienceSection />
         <EducationSection />
@@ -23,6 +23,6 @@ export default function WorkPage() {
         <ProjectSection />
         <AchievementSection />
       </motion.div>
-    </div>
+    </MainLayout>
   );
 }

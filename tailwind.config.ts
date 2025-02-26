@@ -25,11 +25,11 @@ const config: Config = {
         ],
       },
       fontSize: {
-        'h1': ['36px', '1.2'],
-        'h2': ['28px', '1.3'],
-        'h3': ['22px', '1.4'],
-        'body': ['16px', '1.5'],
-        'small': ['14px', '1.5'],
+        'h1': ['28px', { lineHeight: '1.2', fontWeight: '500' }],
+        'h2': ['24px', { lineHeight: '1.3', fontWeight: '500' }],
+        'h3': ['20px', { lineHeight: '1.4', fontWeight: '500' }],
+        'base': ['16px', { lineHeight: '1.5' }],
+        'sm': ['14px', { lineHeight: '1.5' }],
       },
       colors: {
         border: "hsl(var(--border))",

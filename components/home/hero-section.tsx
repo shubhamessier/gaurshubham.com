@@ -13,7 +13,7 @@ export function HeroSection() {
       transition={{ duration: 0.5 }}
       className="space-y-2 sm:space-y-4"
     >
-      <h1 className="text-2xl pb-3 sm:text-2xl lg:text-[28px] font-medium ">
+      <h1 className="text-2xl sm:text-3xl lg:text-[28px] font-medium">
         Shubham Gaur
       </h1>
       <div className="space-y-2 sm:space-y-8">
@@ -32,7 +32,7 @@ export function HeroSection() {
           </p>
           <p>
             I see hacking as the art of programming, creativity beyond paywalls
-            and firewalls. It’s about innovating and experimenting freely,
+            and firewalls. It's about innovating and experimenting freely,
             creating unique ways to make or break things rather than stealing or
             copying.
           </p>

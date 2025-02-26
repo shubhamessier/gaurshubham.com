@@ -1,20 +1,19 @@
+"use client";
+
 import "./globals.css";
-import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/navigation";
 import { LoadingScreen } from "@/components/loading-screen";
-[];
-export const metadata: Metadata = {
-  title: "Shubham Gaur ",
-  description: "Full-Stack Engineer specializing in AI/ML and Cybersecurity",
-};
+import { useState } from "react";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [isContentVisible, setIsContentVisible] = useState(false);
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-background font-sans antialiased">
@@ -24,11 +23,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <LoadingScreen />
-          <div className="relative flex min-h-screen flex-col">
-            <Navigation />
-            <main className="flex-1">{children}</main>
-          </div>
+          <LoadingScreen onLoadingComplete={() => setIsContentVisible(true)} />
+          {isContentVisible && (
+            <div className="relative flex min-h-screen flex-col">
+              <Navigation />
+              <div className="flex-1 pt-28 pb-16 sm:pt-32 sm:pb-20">
+                {children}
+              </div>
+            </div>
+          )}
         </ThemeProvider>
         <Analytics />
       </body>

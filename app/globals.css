@@ -47,9 +47,7 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
@@ -59,41 +57,23 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  a {
-    z-index: 150;
-  }
   h1 {
-    @apply text-5xl font-bold;
-    line-height: 1;
+    @apply text-2xl sm:text-3xl lg:text-[28px] font-medium tracking-tight;
+    line-height: 1.2;
   }
 
   h2 {
-    @apply text-2xl font-semibold tracking-tight;
+    @apply text-xl sm:text-2xl lg:text-[24px] font-medium tracking-tight;
     line-height: 1.3;
   }
 
   h3 {
-    @apply text-xl font-medium;
+    @apply text-lg sm:text-xl lg:text-[20px] font-medium;
     line-height: 1.4;
   }
 
   p {
-    @apply leading-relaxed;
-    font-size: 14.5px;
+    @apply text-sm sm:text-base lg:text-[16px] leading-relaxed text-muted-foreground;
   }
 
   .text-balance {

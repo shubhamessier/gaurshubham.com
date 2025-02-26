@@ -1,26 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Head from "next/head";
 import { HeroSection } from "@/components/home/hero-section";
 import { Contact } from "@/components/contact";
+import { MainLayout } from "@/components/layout/main-layout";
+import { Section } from "@/components/layout/section";
 
 export default function Home() {
   return (
-    <div className="mt-9 container mx-auto px-4 sm:px-6 lg:px-8  sm:py-8 lg:py-12 max-w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1000px]">
+    <MainLayout>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.0 }}
-        viewport={{ once: true }}
-        className="space-y-5"
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="space-y-10 sm:space-y-14 lg:space-y-20 px-4 sm:px-6 lg:px-8"
       >
         <HeroSection />
-        <h2 className="text-2xl pt-6 sm:text-2xl sm:pt-2 lg:text-2xl font-medium ">
-          Contact
-        </h2>
-        <Contact />
+        <Section>
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4">
+            Contact
+          </h2>
+          <Contact />
+        </Section>
       </motion.div>
-    </div>
+    </MainLayout>
   );
 }
