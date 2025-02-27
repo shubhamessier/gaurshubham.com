@@ -27,7 +27,7 @@ export default function RootLayout({
           {isContentVisible && (
             <div className="relative flex min-h-screen flex-col">
               <Navigation />
-              <div className="flex-1 pt-28 pb-16 sm:pt-32 sm:pb-20">
+              <div className="flex-1 pt-20 pb-16 sm:pt-32 sm:pb-20">
                 {children}
               </div>
             </div>

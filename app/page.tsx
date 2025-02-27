@@ -17,13 +17,14 @@ export default function Home() {
         <HeroSection />
         <Section>
           <motion.div {...animationConfig}>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-[28px] font-medium">
               Contact
             </h2>
           </motion.div>
           <motion.div {...animationConfig}>
             <p className="text-sm sm:text-base lg:text-[16px] leading-relaxed text-muted-foreground">
-              I love meeting new people, and I reply to every mail, so say hello.
+              I love meeting new people, and I reply to every mail, so say
+              hello.
             </p>
           </motion.div>
           <Contact />
