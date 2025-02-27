@@ -11,9 +11,9 @@ export function HeroSection() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="space-y-2 sm:space-y-4"
+      className="space-y-4 sm:space-y-4"
     >
-      <h1 className="text-2xl sm:text-3xl lg:text-[28px] font-medium">
+      <h1 className="text-3xl pb-4 sm:text-3xl lg:text-[28px] font-medium">
         Shubham Gaur
       </h1>
       <div className="space-y-2 sm:space-y-8">

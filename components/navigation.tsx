@@ -28,7 +28,7 @@ export function Navigation() {
       className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur"
     >
       <Container>
-        <div className="flex items-center mt-6">
+        <div className="flex items-center mt-10">
           <Link
             href="/"
             className="text-m sm:text-base lg:text-[17.6px] font-medium hover:text-foreground/80 transition-colors"
