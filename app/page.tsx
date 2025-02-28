@@ -23,15 +23,14 @@ export default function Home() {
         <HeroSection />
         <Section>
           <motion.div {...animationConfig}>
-            <h2 className="text-[28px] pt-5 font-medium">
+            <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium pb-4">
               Socials
             </h2>
           </motion.div>
           <motion.div
             {...animationConfig}
             className=" text-[16px] leading-relaxed text-muted-foreground"
-          >
-          </motion.div>
+          ></motion.div>
           <Contact />
         </Section>
       </motion.div>

@@ -273,7 +273,9 @@ export default function AboutPage() {
             </p>
             <p>
               The core of a man's spirit comes from new experiences. I live by
-              this thought, and I try to implement it in my life.
+              this thought, and I try to implement it in my life. By trying to
+              go beyond my comfort zone and to do things without delving into the
+              spiraling fear of thoughts and possibilites.
             </p>
           </motion.div>
         </Section>

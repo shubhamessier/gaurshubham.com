@@ -6,7 +6,7 @@ import { Experience, experiences } from "@/data/experience";
 export function ExperienceSection() {
   return (
     <section className="space-y-5">
-      <h1 className="text-[28px] font-medium pb-4">Experience</h1>
+      <h1 className="text-[28px] font-medium pb-8">Experience</h1>
       <div className="space-y-8">
         {experiences.map((job) => (
           <motion.div
