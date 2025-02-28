@@ -171,7 +171,7 @@ export default function AboutPage() {
             className="space-y-6 sm:space-y-8"
           >
             <p>
-              I do have like socialising and meeting new people constantly, but
+              I do like socialising and meeting new people constantly, but
               sometimes I just live alone, process my thoughts, work on the
               things I want to do, rather than just follow where the group goes,
               I do hate larger groups where the decision making is made by the

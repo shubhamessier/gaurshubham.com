@@ -17,7 +17,7 @@ export function HeroSection() {
         Shubham Gaur
       </h1>
       <div className="space-y-2 sm:space-y-8">
-        <div className="space-y-6 sm:space-y-8 text-sm sm:text-base lg:text-[16px] leading-relaxed text-muted-foreground">
+        <div className="space-y-6 sm:space-y-8  text-sm sm:text-base lg:text-[16px] leading-relaxed text-muted-foreground">
           <p>
             I am a full time software developer, part time hacker. I believe in
             the philosophy, &quot;An idiot admires complexity, a genius admires
