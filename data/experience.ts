@@ -1,5 +1,6 @@
 export interface Experience {
   company: string;
+  companyUrl?: string;
   role: string;
   duration: string;
   description: string;
@@ -8,13 +9,14 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     company: "Solsphere AI",
+    companyUrl: "https://solsphere.ai",
     role: "Software Development Engineer",
     duration: "Feb 2025 - Present",
-    description:
-      "Starting Afresh."
+    description: "Starting Afresh."
   },
   {
     company: "Smartdocs Inc",
+    companyUrl: "https://smartdocs.ai",
     role: "Software Development Engineer",
     duration: "Aug 2024 - Nov 2024",
     description:
@@ -22,6 +24,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Anti AI",
+    companyUrl: "https://antiai.ltd",
     role: "Software Development Engineer",
     duration: "Mar 2024 - July 2024",
     description:
@@ -29,6 +32,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "NIT Trichy",
+    companyUrl: "https://nitt.edu",
     role: "Summer Research Intern",
     duration: "Jun 2023 - Aug 2023",
     description:

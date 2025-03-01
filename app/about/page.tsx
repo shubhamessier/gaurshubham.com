@@ -23,17 +23,17 @@ const timelineEvents = [
   {
     year: "2023",
     description:
-      "Interned at NIT Trichy, Studied Cybersecurity, Reinforcement Learning and dove into AI.",
+      "Interned at NIT Trichy, Studied Cybersecurity, Reinforcement Learning and dove deeper into AI.",
   },
   {
     year: "2024",
     description:
-      "Restarted my life after a setback from last year, Joined a startup and started working on different projects. Moved to Jaipur, India.",
+      "Rebuilt my life after a setback from last year, Joined a early startup . Moved to Jaipur, India.",
   },
   {
     year: "2024",
     description:
-      "Left the startup, Joined a US Based   Company as a Software Engineer.",
+      "Left the startup, Joined a US Based Company as a Software Engineer.",
   },
   {
     year: "2024",
@@ -59,7 +59,7 @@ export default function AboutPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
+            transition={{ duration: 0.1, ease: "easeOut", delay: 0.01 }}
           >
             <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
               About Me in 10 mins
@@ -69,7 +69,7 @@ export default function AboutPage() {
             className="space-y-4 sm:space-y-8 text-sm sm:text-base lg:text-[16px] leading-relaxed text-muted-foreground"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.1, ease: "easeOut", delay: 0.01 }}
           >
             <div className="space-y-6 sm:space-y-8">
               <motion.div
@@ -91,7 +91,7 @@ export default function AboutPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
+                transition={{ duration: 0.1, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.1 }}
               >
                 <p>
@@ -106,7 +106,7 @@ export default function AboutPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
+                transition={{ duration: 0.1, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.1 }}
               >
                 <p>
@@ -122,7 +122,7 @@ export default function AboutPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
+                transition={{ duration: 0.1, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.1 }}
               >
                 <p>
@@ -140,7 +140,7 @@ export default function AboutPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
+                transition={{ duration: 0.1, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.1 }}
               >
                 <p>
@@ -157,7 +157,7 @@ export default function AboutPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
+            transition={{ duration: 0.1, ease: "easeOut", delay: 0.1 }}
           >
             <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
               I like living alone.
@@ -166,7 +166,7 @@ export default function AboutPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.1, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.1 }}
             className="space-y-6 sm:space-y-8"
           >
@@ -196,7 +196,7 @@ export default function AboutPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.1, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.1 }}
           >
             <ReadingList books={books} />
@@ -206,7 +206,7 @@ export default function AboutPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
+            transition={{ duration: 0.1, ease: "easeOut", delay: 0.1 }}
           >
             <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
               Science and Technology.
@@ -215,7 +215,7 @@ export default function AboutPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.1, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.1 }}
           >
             <p>
@@ -247,7 +247,7 @@ export default function AboutPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
+            transition={{ duration: 0.1, ease: "easeOut", delay: 0.1 }}
           >
             <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
               I don't like stability.
@@ -257,7 +257,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="space-y-6 sm:space-y-8"
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.1, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.1 }}
           >
             <p>
@@ -274,8 +274,8 @@ export default function AboutPage() {
             <p>
               The core of a man's spirit comes from new experiences. I live by
               this thought, and I try to implement it in my life. By trying to
-              go beyond my comfort zone and to do things without delving into the
-              spiraling fear of thoughts and possibilites.
+              go beyond my comfort zone and to do things without delving into
+              the spiraling fear of thoughts and possibilites.
             </p>
           </motion.div>
         </Section>
@@ -283,7 +283,7 @@ export default function AboutPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
+            transition={{ duration: 0.1, ease: "easeOut", delay: 0.1 }}
           >
             <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
               Questions? Thoughts?
@@ -292,7 +292,7 @@ export default function AboutPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.1, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.1 }}
           >
             <p className="text-[16px] leading-relaxed text-muted-foreground">
@@ -307,6 +307,13 @@ export default function AboutPage() {
               .
             </p>
           </motion.div>
+        </Section>
+        <Section>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          ></motion.div>
         </Section>
       </div>
     </MainLayout>

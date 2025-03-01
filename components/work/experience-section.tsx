@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Experience, experiences } from "@/data/experience";
+import Link from "next/link";
 
 export function ExperienceSection() {
   return (
@@ -16,7 +17,20 @@ export function ExperienceSection() {
             className="space-y-2"
           >
             <div className="flex justify-between items-baseline">
-              <h3 className="text-[20px] font-medium">{job.company}</h3>
+              <h3 className="text-[20px] font-medium">
+                {job.companyUrl ? (
+                  <Link 
+                    href={job.companyUrl} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors duration-200"
+                  >
+                    {job.company}
+                  </Link>
+                ) : (
+                  job.company
+                )}
+              </h3>
               <span className="text-[16px] text-muted-foreground">
                 {job.duration}
               </span>

@@ -13,11 +13,11 @@ export function HeroSection() {
       transition={{ duration: 0.3, ease: "easeOut" }}
       className="space-y-4 sm:space-y-4"
     >
-      <h1 className="text-xl sm:text-3xl lg:text-[28px] font-medium pb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-[28px] font-medium pb-4">
         Shubham Gaur
       </h1>
       <div className="space-y-2 sm:space-y-8">
-        <div className="space-y-6 sm:space-y-8  text-sm sm:text-base lg:text-[16px] leading-relaxed text-muted-foreground">
+        <div className="space-y-4 sm:space-y-8  text-sm sm:text-base lg:text-[16px] leading-relaxed text-muted-foreground">
           <p>
             I am a full time software developer, part time hacker. I believe in
             the philosophy, &quot;An idiot admires complexity, a genius admires
