@@ -10,6 +10,10 @@ import { ReadingList } from "@/components/about/reading-list";
 
 const timelineEvents = [
   { year: "2003", description: "Born in Jodhpur, Rajasthan, India." },
+  {
+    year: "2010",
+    description: "Used PC for the first time, instant crush.",
+  },
   { year: "2015", description: "Started using QBasic in school." },
   {
     year: "2021",
@@ -42,7 +46,7 @@ const timelineEvents = [
   {
     year: "2025",
     description:
-      "Also started building Astroyapper.com, but left it after some time due to difference of vision with the co-founder.",
+      "Started building Astroyapper.com, but left it after some time due to difference of vision with the co-founder.",
   },
   {
     year: "2025",
@@ -62,7 +66,7 @@ export default function AboutPage() {
             transition={{ duration: 0.1, ease: "easeOut", delay: 0.01 }}
           >
             <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
-              About Me in 10 mins
+              About Me in 10 mins.
             </h2>
           </motion.div>
           <motion.div
@@ -79,9 +83,9 @@ export default function AboutPage() {
                 viewport={{ once: true, amount: 0.1 }}
               >
                 <p>
-                  <b>Who are you anyways?</b> Good Question, I'm Shubham, here's
-                  my story. Since my childhood, I was fascinated by computers
-                  and technology. At 10, I was curious enough to learn
+                  <b>Who are you anyways?</b> Good Question, I&apos;m Shubham,
+                  here&apos;s my story. Since my childhood, I was fascinated by
+                  computers and technology. At 10, I was curious enough to learn
                   PowerPoint on my own. As a result, I spent years of my
                   childhood learning about them, fixing my computer, taking
                   apart hard drives.
@@ -144,10 +148,10 @@ export default function AboutPage() {
                 viewport={{ once: true, amount: 0.1 }}
               >
                 <p>
-                  I don't like using properitary softwares, I like to use free
-                  and open source softwares. I like to work with open source
-                  softwares, and stay avoid getting into the walled garden of
-                  ecosystems.
+                  I don&apos;t like using properitary softwares, I like to use
+                  free and open source softwares. I like to work with open
+                  source softwares, and stay avoid getting into the walled
+                  garden of ecosystems.
                 </p>
               </motion.div>
             </div>
@@ -209,7 +213,7 @@ export default function AboutPage() {
             transition={{ duration: 0.1, ease: "easeOut", delay: 0.1 }}
           >
             <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
-              Science and Technology.
+              Technology.
             </h2>
           </motion.div>
           <motion.div
@@ -219,15 +223,15 @@ export default function AboutPage() {
             viewport={{ once: true, amount: 0.1 }}
           >
             <p>
-              As vague it may sound to you, but there's a very specific reason
-              why I'm putting it here, As a child growing up in 2000s, Science
-              and Technology were noble pursuits and something that provided a
-              deep meaning to life, the ability to understand the universe and
-              see the universe in it's true form has always been fascinating.
-              Technology provided a way for me to mask my idendity and be cool,
-              the understanding of complex systems, devices, protocols etc. has
-              made me intersted to try out different technologies and make
-              something useful out of it.
+              As vague it may sound to you, but there&apos;s a very specific
+              reason why I&apos;m putting it here, As a child growing up in
+              2000s, Science and Technology were noble pursuits and something
+              that provided a deep meaning to life, the ability to understand
+              the universe and see the universe in it&apos;s true form has
+              always been fascinating. Technology provided a way for me to mask
+              my idendity and be cool, the understanding of complex systems,
+              devices, protocols etc. has made me intersted to try out different
+              technologies and make something useful out of it.
             </p>
           </motion.div>
         </Section>
@@ -250,7 +254,7 @@ export default function AboutPage() {
             transition={{ duration: 0.1, ease: "easeOut", delay: 0.1 }}
           >
             <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
-              I don't like stability.
+              I don&apos;t like stability.
             </h2>
           </motion.div>
           <motion.div
@@ -263,18 +267,18 @@ export default function AboutPage() {
             <p>
               {" "}
               <b>Wait, What? </b>
-              The answer is simple, I don't like limiting myself to specific
-              outcomes and possibilities and settle early in life. I've always
-              wanted to work on different technologies, learning something new
-              every day, changing cities, learning about cultures, people,
-              living life to its meaning which is change. It's better to mould
-              life, see its true meaning, and live up to it, than accept what's
-              given by default.
+              The answer is simple, I don&apos;t like limiting myself to
+              specific outcomes and possibilities and settle early in life.
+              I&apos;ve always wanted to work on different technologies,
+              learning something new every day, changing cities, learning about
+              cultures, people, living life to its meaning which is change.
+              It&apos;s better to mould life, see its true meaning, and live up
+              to it, than accept what&apos;s given by default.
             </p>
             <p>
-              The core of a man's spirit comes from new experiences. I live by
-              this thought, and I try to implement it in my life. By trying to
-              go beyond my comfort zone and to do things without delving into
+              The core of a man&apos;s spirit comes from new experiences. I live
+              by this thought, and I try to implement it in my life. By trying
+              to go beyond my comfort zone and to do things without delving into
               the spiraling fear of thoughts and possibilites.
             </p>
           </motion.div>

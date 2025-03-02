@@ -2,7 +2,17 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Twitter, Globe, Instagram, Facebook, Rss, NotebookPen } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+  Globe,
+  Instagram,
+  Facebook,
+  Rss,
+  NotebookPen,
+} from "lucide-react";
 import Link from "next/link";
 
 const socialLinks = [
@@ -42,12 +52,11 @@ const socialLinks = [
     href: "https://instagram.com/shubham.git",
     color: "hover:text-[#e4405f]",
   },
-
 ];
 
 export function Contact() {
   return (
-    <div className="relative z-50 flex flex-wrap gap-3 sm:gap-5 mt-4   rounded-lg shadow-md">
+    <div className="relative z-50 flex flex-wrap gap-3 sm:gap-5 mt-[-4]   rounded-lg shadow-md">
       {socialLinks.map((link) => (
         <div key={link.name} className="relative z-20">
           <Button size="sm" className="z-[50]" asChild></Button>

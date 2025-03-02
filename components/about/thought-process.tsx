@@ -57,11 +57,17 @@ export function ThoughtProcess() {
                 transition={{ duration: 0.3, delay: index * 0.1 + 0.2 }}
                 viewport={{ once: true }}
               >
-                <ArrowRight className="h-6 w-6 text-muted-foreground" 
+                <ArrowRight
+                  className="h-6 w-6 text-muted-foreground"
                   style={{
-                    transform: index === 1 ? 'rotate(90deg)' : 
-                             index === 2 ? 'rotate(180deg)' : 
-                             index === 3 ? 'rotate(270deg)' : 'rotate(0deg)'
+                    transform:
+                      index === 1
+                        ? "rotate(90deg)"
+                        : index === 2
+                        ? "rotate(180deg)"
+                        : index === 3
+                        ? "rotate(270deg)"
+                        : "rotate(0deg)",
                   }}
                 />
               </motion.div>
@@ -71,4 +77,4 @@ export function ThoughtProcess() {
       </div>
     </div>
   );
-} 
+}
