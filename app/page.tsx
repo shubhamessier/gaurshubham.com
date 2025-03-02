@@ -18,17 +18,17 @@ export default function Home() {
     <MainLayout>
       <motion.div
         {...animationConfig}
-        className="space-y-8 sm:space-y-12 lg:space-y-16"
+        className="space-y-5 sm:space-y-12 lg:space-y-12"
       >
         <HeroSection />
         <Section>
           <motion.div {...animationConfig}>
-            <h2 className="text-xl sm:text-3xl lg:text-[28px] pt-8 font-medium ">
+            <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium ">
               Socials
             </h2>
           </motion.div>
-          <motion.div {...animationConfig} className="space-y-4">
-            <p className="text-[16px] leading-relaxed text-muted-foreground">
+          <motion.div {...animationConfig} className="space-y-2">
+            <p className="text-[16px] pb-8 leading-relaxed text-muted-foreground">
               The best way to follow me is my socials.
             </p>
             <Contact />

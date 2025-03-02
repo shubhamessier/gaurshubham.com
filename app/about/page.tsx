@@ -58,7 +58,7 @@ const timelineEvents = [
 export default function AboutPage() {
   return (
     <MainLayout>
-      <div className="space-y-8 sm:space-y-12 lg:space-y-16">
+      <div className="space-y-14 sm:space-y-12 lg:space-y-16">
         <Section>
           <motion.div
             initial={{ opacity: 0 }}

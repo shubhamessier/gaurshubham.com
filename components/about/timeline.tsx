@@ -26,11 +26,11 @@ export function Timeline({ events }: TimelineProps) {
           <div className="text-lg font-medium text-muted-foreground w-24">
             {event.year}
           </div>
-          <div className="flex-1 text-base text-muted-foreground leading-relaxed">
+          <p className="flex-1 text-muted-foreground leading-relaxed">
             {event.description}
-          </div>
+          </p>
         </motion.div>
       ))}
     </div>
   );
-} 
+}

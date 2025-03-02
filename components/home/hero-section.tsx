@@ -21,7 +21,7 @@ export function HeroSection() {
           <p>
             I am a full time software developer, part time hacker. I believe in
             the philosophy, &quot;An idiot admires complexity, a genius admires
-            simplicity." Outside of programming, I enjoy writing my blog,
+            simplicity.&quot; Outside of programming, I enjoy writing my blog,
             spending time offline and learning about newer innovations.
           </p>
           <p>
