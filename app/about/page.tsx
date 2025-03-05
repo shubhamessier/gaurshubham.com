@@ -65,7 +65,7 @@ export default function AboutPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.1, ease: "easeOut", delay: 0.01 }}
           >
-            <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
+            <h2 className="text-[28px] font-medium pb-8">
               About Me in 10 mins.
             </h2>
           </motion.div>
@@ -163,7 +163,7 @@ export default function AboutPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.1, ease: "easeOut", delay: 0.1 }}
           >
-            <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
+            <h2 className="text-[28px] font-medium pb-8 font-medium">
               I like living alone.
             </h2>
           </motion.div>
@@ -212,7 +212,7 @@ export default function AboutPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.1, ease: "easeOut", delay: 0.1 }}
           >
-            <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
+            <h2 className="text-[28px] font-medium pb-8 font-medium">
               Technology.
             </h2>
           </motion.div>
@@ -241,7 +241,7 @@ export default function AboutPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.15, ease: "easeOut", delay: 0.9 }}
           >
-            <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
+            <h2 className="text-[28px] font-medium pb-8 font-medium">
               Timeline for context.
             </h2>
           </motion.div>
@@ -253,7 +253,7 @@ export default function AboutPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.1, ease: "easeOut", delay: 0.1 }}
           >
-            <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
+            <h2 className="text-[28px] font-medium pb-8 font-medium">
               I don&apos;t like stability.
             </h2>
           </motion.div>
@@ -289,7 +289,7 @@ export default function AboutPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.1, ease: "easeOut", delay: 0.1 }}
           >
-            <h2 className="text-xl sm:text-3xl lg:text-[28px] font-medium">
+            <h2 className="text-[28px] font-medium pb-8 font-medium">
               Questions? Thoughts?
             </h2>
           </motion.div>

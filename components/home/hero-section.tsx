@@ -13,9 +13,7 @@ export function HeroSection() {
       transition={{ duration: 0.3, ease: "easeOut" }}
       className="space-y-4 sm:space-y-4"
     >
-      <h1 className="text-2xl sm:text-3xl lg:text-[28px] font-medium pb-4">
-        Shubham Gaur
-      </h1>
+      <h1 className="text-[28px] font-medium pb-8 font-medium">Shubham Gaur</h1>
       <div className="space-y-2 sm:space-y-8">
         <div className="space-y-4 sm:space-y-8  text-sm sm:text-base lg:text-[16px] leading-relaxed text-muted-foreground">
           <p>
@@ -25,14 +23,14 @@ export function HeroSection() {
             spending time offline and learning about newer innovations.
           </p>
           <p>
-            I've recently adopted the hobby of breaking down tech and teaching
-            them in fun ways to my social group. I really admire the initiative
-            of free open source software (FOSS), thus Linux became my all-time
-            favorite.
+            I&apos;ve recently adopted the hobby of breaking down tech and
+            teaching them in fun ways to my social group. I really admire the
+            initiative of free open source software (FOSS), thus Linux became my
+            all-time favorite.
           </p>
           <p>
             I see hacking as the art of programming, creativity beyond paywalls
-            and firewalls. It's about innovating and experimenting freely,
+            and firewalls. It&apos;s about innovating and experimenting freely,
             creating unique ways to make or break things rather than stealing or
             copying.
           </p>
