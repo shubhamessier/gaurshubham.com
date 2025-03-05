@@ -7,7 +7,7 @@ import Link from "next/link";
 export function ExperienceSection() {
   return (
     <section className="space-y-5">
-      <h1 className="text-[28px] font-medium pb-8">Experience</h1>
+      <h1 className="text-[22px] font-medium pb-5">Experience</h1>
       <div className="space-y-8">
         {experiences.map((job) => (
           <motion.div

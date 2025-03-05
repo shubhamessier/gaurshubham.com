@@ -13,7 +13,7 @@ export function HeroSection() {
       transition={{ duration: 0.3, ease: "easeOut" }}
       className="space-y-4 sm:space-y-4"
     >
-      <h1 className="text-[28px] font-medium pb-8 font-medium">Shubham Gaur</h1>
+      <h1 className="text-[22px] font-medium pb-5 font-medium">Shubham Gaur</h1>
       <div className="space-y-2 sm:space-y-8">
         <div className="space-y-4 sm:space-y-8  text-sm sm:text-base lg:text-[16px] leading-relaxed text-muted-foreground">
           <p>
