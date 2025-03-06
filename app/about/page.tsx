@@ -151,8 +151,8 @@ export default function AboutPage() {
                 <p>
                   I don&apos;t like using properitary softwares, I like to use
                   free and open source softwares. I like to work with open
-                  source softwares, and stay avoid getting into the walled
-                  garden of ecosystems.
+                  source softwares, and I avoid getting into the walled garden
+                  of ecosystems.
                 </p>
               </motion.div>
             </div>
