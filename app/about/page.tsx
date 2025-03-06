@@ -219,8 +219,8 @@ export default function AboutPage() {
               life to be spontaneous) all I work for is to gain a little more
               entropy, that extra ability to indulge in my pursuits without
               having to think about the constraints. The core of humanly life
-              has always been the pursuit of "the more" and I don't find myself
-              very different here.
+              has always been the pursuit of &quot;the more&quot; and I
+              don&apos;t find myself very different here.
             </p>
           </motion.div>
         </Section>
