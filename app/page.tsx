@@ -23,7 +23,7 @@ export default function Home() {
         <HeroSection />
         <Section>
           <motion.div {...animationConfig}>
-            <h2 className="text-[22px] font-medium pb-5 font-medium ">
+            <h2 className="text-[22px] font-medium pt-2 font-medium ">
               Socials
             </h2>
           </motion.div>

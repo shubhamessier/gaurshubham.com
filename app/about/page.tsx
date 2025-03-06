@@ -26,6 +26,7 @@ const timelineEvents = [
   },
   {
     year: "2023",
+
     description:
       "Interned at NIT Trichy, Studied Cybersecurity, Reinforcement Learning and dove deeper into AI.",
   },
@@ -198,6 +199,34 @@ export default function AboutPage() {
 
         <Section>
           <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.1, ease: "easeOut", delay: 0.1 }}
+          >
+            <h2 className="text-[22px] font-medium pb-5 font-medium">
+              Entropy & Life.
+            </h2>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="space-y-6 sm:space-y-8"
+            transition={{ duration: 0.1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            <p>
+              The goal of every journey is to gain more entropy (the ability for
+              life to be spontaneous) all I work for is to gain a little more
+              entropy, that extra ability to indulge in my pursuits without
+              having to think about the constraints. The core of humanly life
+              has always been the pursuit of "the more" and I don't find myself
+              very different here.
+            </p>
+          </motion.div>
+        </Section>
+
+        <Section>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.1, ease: "easeOut" }}
@@ -229,9 +258,9 @@ export default function AboutPage() {
               that provided a deep meaning to life, the ability to understand
               the universe and see the universe in it&apos;s true form has
               always been fascinating. Technology provided a way for me to mask
-              my idendity and be cool, the understanding of complex systems,
-              devices, protocols etc. has made me intersted to try out different
-              technologies and make something useful out of it.
+              my identity and be cool, the understanding of complex systems,
+              devices, protocols etc. has made me interested to try out
+              different things and make something useful out of it.
             </p>
           </motion.div>
         </Section>
@@ -271,9 +300,10 @@ export default function AboutPage() {
               specific outcomes and possibilities and settle early in life.
               I&apos;ve always wanted to work on different technologies,
               learning something new every day, changing cities, learning about
-              cultures, people, living life to its meaning which is change.
-              It&apos;s better to mould life, see its true meaning, and live up
-              to it, than accept what&apos;s given by default.
+              cultures, people and living life to its meaning which is{" "}
+              <span className="text-primary">"change"</span>. It&apos;s better
+              to mould life, see its true meaning, and live up to it, than
+              accept what&apos;s given by default.
             </p>
             <p>
               The core of a man&apos;s spirit comes from new experiences. I live
@@ -299,7 +329,7 @@ export default function AboutPage() {
             transition={{ duration: 0.1, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.1 }}
           >
-            <p className="text-[16px] leading-relaxed text-muted-foreground">
+            <p className="leading-relaxed text-muted-foreground">
               <b>Heya Stranger, </b>I love talking to people, and I write back
               to every mail. you can write me{" "}
               <a
