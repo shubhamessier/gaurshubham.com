@@ -119,8 +119,12 @@ export default function AboutPage() {
                   picked up casually exploring my phone camera&apos;s
                   capabilities, I&apos;ve captured different shots of moons,
                   stars & nebulas. During my college, I started writing my own
-                  blog, The Zero Days of Life where I write about my daily life,
-                  my failures, challenges etc.
+                  blog,{" "}
+                  <a href="https://blog.gaurshubham.com/">
+                    <span className="text-primary">The Zero Days of Life</span>
+                  </a>{" "}
+                  where I write about my daily life, my failures, challenges
+                  etc.
                 </p>
               </motion.div>
 
@@ -181,18 +185,19 @@ export default function AboutPage() {
               things I want to do, rather than just follow where the group goes,
               I do hate larger groups where the decision making is made by the
               alpha of the group. I like working with small sets of people, and
-              enjoy the prosepct of knowing everyone closely. The rules change
+              I enjoy the prospect of knowing everyone closely. The rules change
               when I travel, I try to strike up conversations with new people,
               make friends and go along.
             </p>
             <p>
               Apart from this, to really become great at something I need to
               spend a lot of time alone on it, to gain that unwavering focus is
-              important for me. I have realised a one good friend is enough to
-              live a meaningful life, everything good above that is a luxury. I
-              try to make my days constant by having a evening
-              <span className="text-primary"> chai</span> outside my home and
-              discussing about my day and my thoughts.
+              important for me. People play a huge role in that, and through
+              time I have realised a one good friend is enough to live a
+              meaningful life, everything good above that is a luxury. I try to
+              make my days even by having a evening
+              <span className="text-primary"> chai</span> with my friend outside
+              my home where we discuss about our thoughts and ideas.
             </p>
           </motion.div>
         </Section>
@@ -298,18 +303,20 @@ export default function AboutPage() {
               <b>Wait, What? </b>
               The answer is simple, I don&apos;t like limiting myself to
               specific outcomes and possibilities and settle early in life.
-              I&apos;ve always wanted to work on different technologies,
-              learning something new every day, changing cities, learning about
-              cultures, people and living life to its meaning which is{" "}
-              <span className="text-primary">"change"</span>. It&apos;s better
-              to mould life, see its true meaning, and live up to it, than
-              accept what&apos;s given by default.
+              I&apos;ve always wanted to work on different technologies, learn
+              something new every day, changing cities, learning about cultures,
+              people and living life to it&apos;s meaning to me which is{" "}
+              <span className="text-primary">&quot;change&quot;</span>.
+              It&apos;s better to mould life, see its true meaning, and live up
+              to it, than to accept what&apos;s given by default.
             </p>
             <p>
-              The core of a man&apos;s spirit comes from new experiences. I live
+              The core of a man&apos;s spirit comes from new experiences, I live
               by this thought, and I try to implement it in my life. By trying
               to go beyond my comfort zone and to do things without delving into
-              the spiraling fear of thoughts and possibilites.
+              the spiral of thoughts and possibilites. At a time, getting stable
+              would be necessary until that let me see life in it&apos;s true
+              colors.
             </p>
           </motion.div>
         </Section>

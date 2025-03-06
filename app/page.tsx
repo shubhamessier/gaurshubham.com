@@ -28,7 +28,7 @@ export default function Home() {
             </h2>
           </motion.div>
           <motion.div {...animationConfig} className="space-y-2">
-            <p className="text-[16px] pb-4 pt-4 leading-relaxed text-muted-foreground">
+            <p className="text-[16px] pt-[-4] pb-8 leading-relaxed text-muted-foreground">
               Follow me on my socials to see different aspects of my life.
             </p>
             <Contact />
