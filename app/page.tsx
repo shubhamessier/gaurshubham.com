@@ -33,7 +33,6 @@ export default function Portfolio() {
   const [currentStatus, setCurrentStatus] = useState({
     availability: portfolioData.status.availability,
     currentWork: portfolioData.status.currentWork,
-    mood: portfolioData.status.mood,
     lastUpdated: new Date(),
   })
 
@@ -283,7 +282,7 @@ C6zD8tk=
       {/* Content Container */}
       <div className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
         {/* Hero Section */}
-        <section className="py-16 mt-20 sm:py-24 lg:py-18 ">
+        <section className="py-16 mt-14 sm:py-24 lg:py-18 ">
           <div className="max-w-3xl">
             <h1 className="font-heading text-4xl sm:text-6xl lg:text-6xl font-normal text-gray-900 mb-8 sm:mb-12 tracking-normal">
               {portfolioData.personal.name}
