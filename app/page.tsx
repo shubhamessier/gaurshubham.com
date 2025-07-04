@@ -8,6 +8,7 @@ import {
   Github,
   Circle,
   Linkedin,
+  Key,
   ChevronDown,
   Pen,
   ChevronUp,
@@ -19,6 +20,7 @@ import {
   BookOpen,
   Twitter,
   Instagram,
+  Briefcase,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
@@ -265,6 +267,7 @@ C6zD8tk=
                 >
                   Contact
                 </a>
+                <a href={portfolioData.personal.resume}>
                 <Button
                   variant="outline"
                   size="sm"
@@ -273,6 +276,7 @@ C6zD8tk=
                   <Download className="w-4 h-4 mr-2" />
                   Resume
                 </Button>
+                </a>
               </div>
             </div>
           )}
@@ -317,23 +321,28 @@ C6zD8tk=
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <a href="#experience">
               <Button className="bg-gray-900 hover:bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-4 font-body text-base">
-                <Download className="w-5 h-5 mr-3" />
-                Resume
+                <Briefcase className="w-5 h-5 mr-1" />
+                My Work
               </Button>
+              </a>
+              
+              <a href="#about">
               <Button
                 variant="outline"
                 className="border-gray-900 text-gray-900 hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 bg-transparent font-body text-base"
               >
-                <Smile className="w-5 h-5 mr-3" />
+                <Smile className="w-5 h-5 mr-2" />
                 About me
               </Button>
+              </a>
               <Button
                 variant="outline"
                 className="border-gray-900 text-gray-900 hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 bg-transparent font-body text-base"
                 onClick={() => window.open(portfolioData.personal.blog, "_blank")}
               >
-                <Pen className="w-5 h-5 mr-3" />
+                <Pen className="w-5 h-5 mr-2" />
                 Blog
               </Button>
             </div>
@@ -353,7 +362,7 @@ C6zD8tk=
                 onClick={() => setAboutExpanded(!aboutExpanded)}
                 className="inline-flex items-center font-body text-base text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-600 pb-1 mb-8"
               >
-                {aboutExpanded ? "Show Less" : "About Me in 10 mins"}
+                {aboutExpanded ? "Show Less" : "About Me (Personal)"}
                 {aboutExpanded ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
               </button>
 
@@ -466,6 +475,9 @@ C6zD8tk=
               {/* Connect Section */}
               <div className="mt-12 sm:mt-16">
                 <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6 sm:mb-8">Connect</h3>
+                <p className="font-body text-base text-gray-700 mb-4 sm:mb-8 leading-relaxed">
+     You can reach out to me on my socials, my email having the fastest response timing.
+    </p>
                 <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
                   <div className="space-y-4">
                     <div className="flex items-center justify-between group">
@@ -721,16 +733,19 @@ C6zD8tk=
       Let's Work Together
     </h2>
     <p className="font-body text-base text-gray-700 mb-12 sm:mb-16 leading-relaxed">
-      I'm Always looking to meet new people, discuss ideas, or just chat. At the end everybody wants a little more spontaneity/entropy in their life isn' it?
+      I'm always looking to meet new people, discuss ideas, or just chat over a chai/coffee. At the end everybody wants a little more spontaneity/entropy in their life isn't it?
     </p>
 
     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start flex-wrap">
 
       {/* Download Resume Button */}
+  
+      <a href={portfolioData.personal.resume}>
       <Button className="bg-white border border-gray-900 hover:bg-gray-100 text-gray-800 px-6 py-3 font-body text-base min-w-[220px] flex items-center justify-center shadow-sm rounded-md">
-        <Download className="w-5 h-5 mr-2" />
+        <Download className="w-5 h-5 " />
         Download Resume
       </Button>
+      </a>
 
       {/* Email Copy Button */}
       <Button
@@ -738,9 +753,9 @@ C6zD8tk=
         className="bg-white border border-gray-900 hover:bg-gray-100 text-gray-800 px-6 py-3 font-body text-base min-w-[220px] flex items-center justify-center shadow-sm rounded-md"
       >
         {copiedEmail === portfolioData.personal.email ? (
-          <Check className="w-5 h-5 mr-2 text-green-600" />
+          <Check className="w-5 h-5 text-green-600" />
         ) : (
-          <Copy className="w-5 h-5 mr-2 text-gray-900" />
+          <Copy className="w-5 h-5 text-gray-900" />
         )}
         Copy Email
       </Button>
@@ -753,7 +768,7 @@ C6zD8tk=
         {copiedPublicKey ? (
           <Check className="w-5 h-5 mr-2 text-green-600" />
         ) : (
-          <Copy className="w-5 h-5 mr-2 text-gray-500" />
+          <Key className="w-5 h-5  text-gray-500" />
         )}
         Copy PGP Key
       </Button>
