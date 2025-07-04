@@ -1,0 +1,204 @@
+{
+  "personal": {
+    "name": "Shubham Gaur",
+    "title": "Full-Stack Engineer specializing in AI/ML, reinforcement learning, and secure scalable system design",
+    "location": "Bengaluru, Karnataka",
+    "email": "shubham.gaur7116@gmail.com",
+    "website": "https://gaurshubham.com",
+    "blog": "https://blog.gaurshubham.com",
+    "linkedin": "https://linkedin.com/in/shubhamgaur10",
+    "github": "https://github.com/shubhamessier",
+    "twitter": "https://x.com/0xshubhamgaur",
+    "instagram": "https://instagram.com/shubham.git"
+  },
+  "status": {
+    "availability": "Available for opportunities",
+    "currentWork": "Building AI compliance systems at Solsphere",
+    "mood": "🚀"
+  },
+  "about": {
+    "summary": "Software Developer with expertise in AI/ML, reinforcement learning, and secure scalable system design. I've delivered products and services for cybersecurity, production tools, and research. Currently working on AI Compliance systems and finding my next interest.",
+    "philosophy": "The goal of every journey is to gain more entropy (the ability for life to be spontaneous) all I work for is to gain a little more entropy, that extra ability to indulge in my pursuits without having to think about the constraints. The core of humanly life has always been the pursuit of \"the more\" and I don't find myself very different here.",
+    "whoAmI": "Good Question, I'm Shubham, here's my story. Since my childhood, I was fascinated by computers and technology. At 10, I was curious enough to learn PowerPoint on my own. As a result, I spent years of my childhood learning about them, fixing my computer, taking apart hard drives.\n\nI've spent countless hours playing Condition Zero, Total Overdose, Grand Theft Auto, Need For Speed etc. I first learnt programming using QBasic during my school, thanks to Windows XP & computer viruses I learnt the habit of fixing errors, early in life.\n\nOther than programming I enjoy astrophotography, a hobby I picked up casually exploring my phone camera's capabilities, I've captured different shots of moons, stars & nebulas. During my college, I started writing my own blog, The Zero Days of Life where I write about my daily life, my failures, challenges etc.\n\nMy work is a reflection of my inspirations. I have been very much inspired by fictional characters, music & programmers, people such as Iron Man (for putting his passion for technology above everything else), Rocky Balboa (for never giving up), Kevin Mitnick (for being my hacker inspiration), Linus Torvalds (for his beautiful contribution to open source), Karate Kid (for teaching me wax on, wax off!), Pink Floyd (for every one of their life altering hits).\n\nI don't like using proprietary software, I like to use free and open-source software. I like to work with open-source software, and I avoid getting into the walled garden of ecosystems.\n\n",
+    "alone": "\n\nI do like socialising and meeting new people constantly, but sometimes I just live alone, process my thoughts, work on the things I want to do, rather than just follow where the group goes, I do hate larger groups where the decision making is made by the alpha of the group. I like working with small sets of people, and I enjoy the prospect of knowing everyone closely. The rules change when I travel, I try to strike up conversations with new people, make friends and go along.\n\nApart from this, to really become great at something I need to spend a lot of time alone on it, to gain that unwavering focus is important for me. People play a huge role in that, and through time I have realised one good friend is enough to live a meaningful life, everything good above that is a luxury. I try to make my days even by having an evening chai with my friend outside my home where we discuss our thoughts and ideas.",
+    "technology": "As vague it may sound to you, but there's a very specific reason why I'm putting it here. As a child growing up in the 2000s, Science and Technology were noble pursuits and something that provided a deep meaning to life. The ability to understand the universe and see the universe in its true form has always been fascinating. Technology provided a way for me to mask my identity and be cool; the understanding of complex systems, devices, protocols, etc., has made me interested to try out different things and make something useful out of it.",
+    "stability": "Wait, what? The answer is simple: I don't like limiting myself to specific outcomes and possibilities and settling early in life. I've always wanted to work on different technologies, learn something new every day, change cities, learn about cultures, people, and live life to its meaning to me which is \"change\". It's better to mould life, see its true meaning, and live up to it than to accept what's given by default.\n\nThe core of a man's spirit comes from new experiences. I live by this thought, and I try to implement it in my life—by trying to go beyond my comfort zone and do things without delving into the spiral of thoughts and possibilities. At a time, getting stable would be necessary; until then let me see life in its true colours."
+  },
+  "readingList": [
+    {
+      "title": "Hackers & Painters",
+      "author": "Paul Graham"
+    },
+    {
+      "title": "The Last Lecture",
+      "author": "Randy Pausch"
+    },
+    {
+      "title": "Matilda",
+      "author": "Roald Dahl"
+    },
+    {
+      "title": "Dune",
+      "author": "Frank Herbert"
+    },
+    {
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari"
+    },
+    {
+      "title": "Ghost in Wires",
+      "author": "Kevin Mitnick"
+    },
+    {
+      "title": "Theory of Everything",
+      "author": "Stephen W. Hawking"
+    },
+    {
+      "title": "Steve Jobs",
+      "author": "Walter Isaacson"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2003",
+      "event": "Born in Jodhpur, Rajasthan, India"
+    },
+    {
+      "year": "2010",
+      "event": "Used PC for the first time, instant crush"
+    },
+    {
+      "year": "2015",
+      "event": "Started using QBasic in school"
+    },
+    {
+      "year": "2021",
+      "event": "Started Studying Engineering, MBM University Jodhpur"
+    },
+    {
+      "year": "2022",
+      "event": "Used Linux Kernel for the first time, instantly became a cult follower"
+    },
+    {
+      "year": "2023",
+      "event": "Interned at NIT Trichy, Studied Cybersecurity, Reinforcement Learning and dove deeper into AI"
+    },
+    {
+      "year": "2024",
+      "event": "Rebuilt my life after a setback from last year, Joined a early startup. Moved to Jaipur, India"
+    },
+    {
+      "year": "2024",
+      "event": "Left the startup, Joined a US Based Company as a Software Engineer"
+    },
+    {
+      "year": "2024",
+      "event": "Left the company to work on my own saas idea, Meetster"
+    },
+    {
+      "year": "2025",
+      "event": "Started building Astroyapper.com, but left it after some time due to difference of vision with the co-founder"
+    },
+    {
+      "year": "2025",
+      "event": "Joined a Startup as a Software Engineer. Moved to Banglore, India"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Development Engineer",
+      "company": "Solsphere AI Inc",
+      "companyUrl": "https://solsphere.ai",
+      "period": "Feb 2025 – Present",
+      "location": "Bengaluru",
+      "responsibilities": [
+        "Developed AI systems for automated compliance using NLP and vector search",
+        "Built desktop-based client application for device security using ElectronJS for Mac, Linux, Windows",
+        "Created multiple internal tools for operations — email-based data RAG pipeline, secure DB search"
+      ]
+    },
+    {
+      "title": "Software Development Engineer",
+      "company": "Smartdocs Inc",
+      "companyUrl": "https://smartdocs.com",
+      "period": "Aug 2024 – Nov 2024",
+      "location": "Jaipur",
+      "responsibilities": [
+        "Delivered 2 PoCs and 1 production app as Full-Stack + AI Engineer using React, Node, MongoDB",
+        "Built LLM-powered chatbot with 55% API latency reduction via async parallelization",
+        "Developed test automation GUI using Electron + Playwright, saving ₹1L annually"
+      ]
+    },
+    {
+      "title": "Founding Engineer",
+      "company": "Stealth Startup",
+      "companyUrl": "",
+      "period": "Mar 2024 – Jul 2024",
+      "location": "Jaipur",
+      "responsibilities": [
+        "Led PoC delivery for investor demos; enabled seed funding traction through live walkthroughs",
+        "Built cross-platform Electron + React apps; improved release compatibility by 90%",
+        "Contributed to pitch decks and demos to 3 VCs — driving technical storytelling"
+      ]
+    },
+    {
+      "title": "Summer Research Intern",
+      "company": "NIT Trichy",
+      "companyUrl": "https://www.nitt.edu",
+      "period": "Jun 2023 – Aug 2023",
+      "location": "Trichy",
+      "responsibilities": [
+        "Implemented DQL/PPO RL agents to simulate cyber-attacks for enterprise deception environments",
+        "Enhanced agent navigation in CyberBattleSim with environment-aware action policies",
+        "Co-authored book chapter: \"Cyberdeception for Lateral Movement Detection in Enterprise Networks\""
+      ]
+    }
+  ],
+  "skills": {
+    "languages": "Rust, Python, C++, Java, Solidity, Embedded C",
+    "webDevelopment": "ReactJS, NodeJS, NextJS, Django, HTML, CSS, JavaScript, SQL, PostgreSQL",
+    "mlAi": "PyTorch, TensorFlow, Keras, Scikit-learn, OpenCV",
+    "toolsCloud": "Git, GitHub, Docker, AWS, Azure, Linux, Postman, Playwright, VS Code"
+  },
+  "projects": [
+    {
+      "title": "Astroyapper",
+      "status": "",
+      "url": "https://astroyapper.com",
+      "description": "Astroyapper is a SaaS, it uses AI and personal information to compute astronomical calculations, made possible by using the algorithms and processes used by astrologers to generate predictions.",
+      "tags": ["React", "Firebase", "TypeScript", "Tailwind", "Render"]
+    },
+    {
+      "title": "Meetster",
+      "status": "Prototype Development",
+      "url": "https://meetster.app",
+      "description": "Meetster aims to making scheduling IRL meets, easy and fun. Meetster is currently in prototype development, and can be waitlisted.",
+      "tags": ["React + Vite", "Supabase", "TypeScript"]
+    },
+    {
+      "title": "Anti AI Website",
+      "status": "",
+      "url": "",
+      "description": "Built company website and HR management system, streamlining 6,000+ monthly applications.",
+      "tags": ["React", "Next.js", "PostgreSQL", "JavaScript", "AWS"]
+    },
+    {
+      "title": "CyberBattleSim (Microsoft)",
+      "status": "",
+      "url": "https://github.com/microsoft/CyberBattleSim",
+      "description": "Enhanced simulation functionalities and refined neural network algorithms during research internship.",
+      "tags": ["Python", "PyTorch", "Reinforcement Learning", "Linux"]
+    }
+  ],
+  "education": {
+    "institution": "MBM University, Jodhpur",
+    "institutionUrl": "https://www.mbmuniversity.ac.in",
+    "degree": "B.E. in Electronics & Communication Engineering",
+    "period": "2021 – 2025"
+  },
+  "achievements": [
+    "Finalist, National Entrepreneurship Challenge, IIT Bombay (2023) — Top 10 of 200+ teams",
+    "Techfest 2022, IIT Bombay — Designed Raspberry Pi-based maze solvers",
+    "Participant, EYRC (e-Yantra) Robotics — Built ROS-based bots using Python"
+  ]
+}
