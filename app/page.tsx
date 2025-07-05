@@ -286,7 +286,7 @@ C6zD8tk=
       {/* Content Container */}
       <div className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
         {/* Hero Section */}
-        <section className="py-16 mt-14 sm:py-24 lg:py-18 ">
+        <section className="mt-0  sm:mt-14 py-16 sm:py-24 lg:py-18">
           <div className="max-w-3xl">
             <h1 className="font-heading text-4xl sm:text-6xl lg:text-6xl font-normal text-gray-900 mb-8 sm:mb-12 tracking-normal">
               {portfolioData.personal.name}
@@ -296,14 +296,14 @@ C6zD8tk=
             </p>  
 
             {/* Location and Status */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-gray-600 mb-12 sm:mb-16 font-body text-base space-y-4 sm:space-y-0">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-gray-600 mb-12 sm:mb-16 font-body text-base space-y-6 sm:space-y-0">
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 mr-3 flex-shrink-0" />
                 <span>{portfolioData.personal.location}</span>
               </div>
 
               {/* Live Status */}
-              <div className="flex items-center space-x-3 bg-green-50 px-4 py-2 rounded-full border border-green-200 w-fit">
+              <div className="flex items-center space-x-3 bg-green-50 mt-4 px-4 py-2 rounded-full border border-green-200 w-fit">
                 <div className="flex items-center space-x-2">
                   <Circle className="w-3 h-3 fill-green-500 text-green-500 animate-pulse flex-shrink-0" />
                   <span className="text-sm font-medium text-green-700">{currentStatus.availability}</span>
@@ -316,36 +316,41 @@ C6zD8tk=
               <p className="font-body text-base text-gray-700">
                 <span className="font-medium">Currently:</span> {currentStatus.currentWork}
               </p>
-              <p className="font-body text-sm text-gray-500 mt-1">Last updated {timeSinceUpdate}</p>
             </div>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-              <a href="#experience">
-              <Button className="bg-gray-900 hover:bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-4 font-body text-base">
-                <Briefcase className="w-5 h-5 mr-1" />
-                My Work
-              </Button>
-              </a>
-              
-              <a href="#about">
-              <Button
-                variant="outline"
-                className="border-gray-900 text-gray-900 hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 bg-transparent font-body text-base"
-              >
-                <Smile className="w-5 h-5 mr-2" />
-                About me
-              </Button>
-              </a>
-              <Button
-                variant="outline"
-                className="border-gray-900 text-gray-900 hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 bg-transparent font-body text-base"
-                onClick={() => window.open(portfolioData.personal.blog, "_blank")}
-              >
-                <Pen className="w-5 h-5 mr-2" />
-                Blog
-              </Button>
-            </div>
+  <a href="#experience" className="w-full sm:w-auto">
+    <Button
+      className="w-full sm:min-w-[160px] flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
+    >
+      <Briefcase className="w-5 h-5" />
+      My Work
+    </Button>
+  </a>
+
+  <a href="#about" className="w-full sm:w-auto">
+    <Button
+      variant="outline"
+      className="w-full sm:min-w-[160px] flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base font-body text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
+    >
+      <Smile className="w-5 h-5" />
+      About Me
+    </Button>
+  </a>
+
+  <div className="w-full sm:w-auto">
+    <Button
+      variant="outline"
+      className="w-full sm:min-w-[160px] flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base font-body text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
+      onClick={() => window.open(portfolioData.personal.blog, "_blank")}
+    >
+      <Pen className="w-5 h-5" />
+      Blog
+    </Button>
+  </div>
+</div>
+
           </div>
         </section>
 
