@@ -1,8 +1,8 @@
 {
   "personal": {
     "name": "Shubham Gaur",
-    "title": "Full-Stack Engineer specializing in AI/ML, reinforcement learning, and secure scalable system design",
-    "location": "Bengaluru, Karnataka",
+    "title": "Full-Stack Engineer specializing, cybersecurity, reinforcement learning, and secure scalable system design",
+    "location": "Bengaluru, Karnataka, IN",
     "email": "shubham.gaur7116@gmail.com",
     "website": "https://gaurshubham.com",
     "blog": "https://blog.gaurshubham.com",
@@ -14,7 +14,7 @@
   },
   "status": {
     "availability": "Available for opportunities",
-    "currentWork": "Off the grid for sometime, living slowly, taking time."
+    "currentWork": "Away from the grid."
   },
   "about": {
     "summary": "Software Developer with expertise in AI/ML, reinforcement learning, and secure scalable system design. I've delivered products and services for cybersecurity, production tools, and research. Currently working on AI Compliance systems and finding my next interest.",
@@ -102,6 +102,10 @@
     {
       "year": "2025",
       "event": "Joined Solsphere AI Inc as a Software Engineer, Working on AI Compliance systems. Moved to Banglore, India"
+    },
+    {
+      "year": "2025",
+      "event": "Refiguring my life"
     }
   ],
   "experience": [

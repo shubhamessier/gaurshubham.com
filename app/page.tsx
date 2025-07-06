@@ -182,13 +182,12 @@ C6zD8tk=
   // Console Easter Eggs
   useEffect(() => {
     console.log(`
-    🎯 Hey there, fellow developer! 
+  
+    Wake up Neo, The Matrix has you..   
     
-    Welcome to my portfolio's console. Here are some fun facts:
-    • This site is built with Next.js 15 and Tailwind CSS
-    • Try the Konami Code: ↑↑↓↓←→←→BA
+    Welcome to my portfolio's console:
+    • Try the Konami Code: ↑↑↓↓←→←→
     • I'm currently ${currentStatus.currentWork.toLowerCase()}
-    • Always happy to chat about tech, astrophotography, or Pink Floyd!
     
     Want to connect? Drop me a line at ${portfolioData.personal.email}
   `)
@@ -479,7 +478,7 @@ C6zD8tk=
 
               {/* Connect Section */}
               <div className="mt-12 sm:mt-16">
-                <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6 sm:mb-8">Connect</h3>
+                <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6 sm:mb-8">Socials</h3>
                 <p className="font-body text-base text-gray-700 mb-4 sm:mb-8 leading-relaxed">
      You can reach out to me on my socials, my email having the fastest response timing.
     </p>
@@ -743,42 +742,48 @@ C6zD8tk=
 
     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start flex-wrap">
 
-      {/* Download Resume Button */}
-  
-      <a href={portfolioData.personal.resume}>
-      <Button className="bg-white border border-gray-900 hover:bg-gray-100 text-gray-800 px-6 py-3 font-body text-base min-w-[220px] flex items-center justify-center shadow-sm rounded-md">
-        <Download className="w-5 h-5 " />
-        Download Resume
-      </Button>
-      </a>
+  {/* Download Resume Button */}
+  <a href={portfolioData.personal.resume} className="w-full sm:w-auto">
+    <Button
+      className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
+    >
+      <Download className="w-5 h-5" />
+      Download Resume
+    </Button>
+  </a>
 
-      {/* Email Copy Button */}
-      <Button
-        onClick={() => copyEmail(portfolioData.personal.email)}
-        className="bg-white border border-gray-900 hover:bg-gray-100 text-gray-800 px-6 py-3 font-body text-base min-w-[220px] flex items-center justify-center shadow-sm rounded-md"
-      >
-        {copiedEmail === portfolioData.personal.email ? (
-          <Check className="w-5 h-5 text-green-600" />
-        ) : (
-          <Copy className="w-5 h-5 text-gray-900" />
-        )}
-        Copy Email
-      </Button>
+  {/* Email Copy Button */}
+  <div className="w-full sm:w-auto">
+    <Button
+      onClick={() => copyEmail(portfolioData.personal.email)}
+      className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
+    >
+      {copiedEmail === portfolioData.personal.email ? (
+        <Check className="w-5 h-5 text-green-600" />
+      ) : (
+        <Copy className="w-5 h-5 text-gray-900" />
+      )}
+      Copy Email
+    </Button>
+  </div>
 
-      {/* PGP Key Copy Button */}
-      <Button
-        onClick={copyPublicKey}
-        className="bg-white border border-gray-900 hover:bg-gray-100 text-gray-800 px-6 py-3 font-body text-base min-w-[220px] flex items-center justify-center shadow-sm rounded-md"
-      >
-        {copiedPublicKey ? (
-          <Check className="w-5 h-5 mr-2 text-green-600" />
-        ) : (
-          <Key className="w-5 h-5  text-gray-500" />
-        )}
-        Copy PGP Key
-      </Button>
+  {/* PGP Key Copy Button */}
+  <div className="w-full sm:w-auto">
+    <Button
+      onClick={copyPublicKey}
+      className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
+    >
+      {copiedPublicKey ? (
+        <Check className="w-5 h-5 text-green-600" />
+      ) : (
+        <Key className="w-5 h-5 text-gray-500" />
+      )}
+      Copy PGP Key
+    </Button>
+  </div>
 
-    </div>
+</div>
+
   </div>
 </section>
 
@@ -787,8 +792,8 @@ C6zD8tk=
         {/* Footer */}
         <footer className="py-12 sm:py-16 border-t border-gray-100">
           <div className="max-w-3xl">
-            <p className="font-body text-sm text-gray-600">
-              © 2025 {portfolioData.personal.name}. 
+            <p className="font-body text-base text-gray-600">
+              © 2025 {portfolioData.personal.name}, <i>There's always something more.</i>. 
             </p>
           </div>
         </footer>
