@@ -1,7 +1,7 @@
 {
   "personal": {
     "name": "Shubham Gaur",
-    "title": "Full-Stack Engineer specializing, cybersecurity, reinforcement learning, and secure scalable system design",
+    "title": "Full-Stack Engineer specializing, cybersecurity, reinforcement learning, and secure scalable system design.",
     "location": "Bengaluru, Karnataka, IN",
     "email": "shubham.gaur7116@gmail.com",
     "website": "https://gaurshubham.com",
@@ -21,8 +21,9 @@
     "philosophy": "The goal of every journey is to gain more entropy (the ability for life to be spontaneous) all I work for is to gain a little more entropy, that extra ability to indulge in my pursuits without having to think about the constraints. The core of humanly life has always been the pursuit of \"the more\" and I don't find myself very different here.",
     "whoAmI": "Good Question, I'm Shubham, here's my story. Since my childhood, I was fascinated by computers and technology. At 10, I was curious enough to learn PowerPoint on my own. As a result, I spent years of my childhood learning about them, fixing my computer, taking apart hard drives.\n\nI've spent countless hours playing Condition Zero, Total Overdose, Grand Theft Auto, Need For Speed etc. I first learnt programming using QBasic during my school, thanks to Windows XP & computer viruses I learnt the habit of fixing errors, early in life.\n\nOther than programming I enjoy astrophotography, a hobby I picked up casually exploring my phone camera's capabilities, I've captured different shots of moons, stars & nebulas. During my college, I started writing my own blog, The Zero Days of Life where I write about my daily life, my failures, challenges etc.\n\nMy work is a reflection of my inspirations. I have been very much inspired by fictional characters, music & programmers, people such as Iron Man (for putting his passion for technology above everything else), Rocky Balboa (for never giving up), Kevin Mitnick (for being my hacker inspiration), Linus Torvalds (for his beautiful contribution to open source), Karate Kid (for teaching me wax on, wax off!), Pink Floyd (for every one of their life altering hits).\n\nI don't like using proprietary software, I like to use free and open-source software. I like to work with open-source software, and I avoid getting into the walled garden of ecosystems.\n\n",
     "alone": "\n\nI do like socialising and meeting new people constantly, but sometimes I just live alone, process my thoughts, work on the things I want to do, rather than just follow where the group goes, I do hate larger groups where the decision making is made by the alpha of the group. I like working with small sets of people, and I enjoy the prospect of knowing everyone closely. The rules change when I travel, I try to strike up conversations with new people, make friends and go along.\n\nApart from this, to really become great at something I need to spend a lot of time alone on it, to gain that unwavering focus is important for me. People play a huge role in that, and through time I have realised one good friend is enough to live a meaningful life, everything good above that is a luxury. I try to make my days even by having an evening chai with my friend outside my home where we discuss our thoughts and ideas.",
-    "technology": "As vague it may sound to you, but there's a very specific reason why I'm putting it here. As a child growing up in the 2000s, Science and Technology were noble pursuits and something that provided a deep meaning to life. The ability to understand the universe and see the universe in its true form has always been fascinating. Technology provided a way for me to mask my identity and be cool; the understanding of complex systems, devices, protocols, etc., has made me interested to try out different things and make something useful out of it.",
-    "stability": "Wait, what? The answer is simple: I don't like limiting myself to specific outcomes and possibilities and settling early in life. I've always wanted to work on different technologies, learn something new every day, change cities, learn about cultures, people, and live life to its meaning to me which is \"change\". It's better to mould life, see its true meaning, and live up to it than to accept what's given by default.\n\nThe core of a man's spirit comes from new experiences. I live by this thought, and I try to implement it in my life—by trying to go beyond my comfort zone and do things without delving into the spiral of thoughts and possibilities. At a time, getting stable would be necessary; until then let me see life in its true colours."
+    "technology": "As vague it may sound to you, but there's a very specific reason why I'm putting it here. As a child growing up in the 2000s, Science and Technology were noble pursuits and something that provided a deep meaning to life. The ability to understand the universe and see the universe in its true form has always been fascinating. Technology provided a way for me to mask my identity and be cool the understanding of complex systems, devices, protocols, etc., has made me interested to try out different things and make something useful out of it.",
+    "Women": "My mother won't like this section, but I like women, not in a womanizer way, but in a way that tells me to connect to them, to share my feelings to and to spend time with, I have a lot of friends and no suprise a large number of them are women.",
+    "stability": "Wait, what? The answer is simple: I don't like limiting myself to specific outcomes and possibilities and settling early in life. I've always wanted to work on different technologies, learn something new every day, change cities, learn about cultures, people, and live life to its meaning to me which is \"change\". It's better to mould life, see its true meaning, and live up to it than to accept what's given by default.\n\nThe core of a man's spirit comes from new experiences. I live by this thought, and I try to implement it in my life—by trying to go beyond my comfort zone and do things without delving into the spiral of thoughts and possibilities. At a time, getting stable would be necessary until then let me see life in its true colours."
   },
   "readingList": [
     {
@@ -85,7 +86,7 @@
     },
     {
       "year": "2024",
-      "event": "Rebuilt my life after a setback from last year, Joined a early startup. Moved to Jaipur, India"
+      "event": "Rebuilt my life after a setback from last year, Joined a early startup, Moved to Jaipur, India"
     },
     {
       "year": "2024",
@@ -101,11 +102,11 @@
     },
     {
       "year": "2025",
-      "event": "Joined Solsphere AI Inc as a Software Engineer, Working on AI Compliance systems. Moved to Banglore, India"
+      "event": "Joined Solsphere AI Inc as a Software Engineer, Worked on AI Compliance systems. Moved to Bengaluru, India"
     },
     {
       "year": "2025",
-      "event": "Refiguring my life"
+      "event": "Refiguring my life, back to the drawing board."
     }
   ],
   "experience": [
@@ -136,12 +137,12 @@
     {
       "title": "Founding Engineer",
       "company": "Stealth Startup",
-      "companyUrl": "",
+      "companyUrl": "https://antiai.ltd",
       "period": "Mar 2024 – Jul 2024",
       "location": "Jaipur",
       "responsibilities": [
-        "Led PoC delivery for investor demos; enabled seed funding traction through live walkthroughs",
-        "Built cross-platform Electron + React apps; improved release compatibility by 90%",
+        "Led PoC delivery for investor demos, enabled seed funding traction through live walkthroughs",
+        "Built cross-platform Electron + React apps, improved release compatibility by 90%",
         "Contributed to pitch decks and demos to 3 VCs — driving technical storytelling"
       ]
     },
@@ -175,14 +176,14 @@
     {
       "title": "Meetster",
       "status": "Prototype Development",
-      "url": "https://meetster.app",
+      "url": "https://meetster.gaurshubham.com",
       "description": "Meetster aims to making scheduling IRL meets, easy and fun. Meetster is currently in prototype development, and can be waitlisted.",
       "tags": ["React + Vite", "Supabase", "TypeScript"]
     },
     {
-      "title": "Anti AI Website",
+      "title": "Stealth Startup Website",
       "status": "",
-      "url": "",
+      "url": "https://antiai.ltd",
       "description": "Built company website and HR management system, streamlining 6,000+ monthly applications.",
       "tags": ["React", "Next.js", "PostgreSQL", "JavaScript", "AWS"]
     },

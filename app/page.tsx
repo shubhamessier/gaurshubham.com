@@ -183,13 +183,13 @@ C6zD8tk=
   useEffect(() => {
     console.log(`
   
-    Wake up Neo, The Matrix has you..   
-    
-    Welcome to my portfolio's console:
-    • Try the Konami Code: ↑↑↓↓←→←→
-    • I'm currently ${currentStatus.currentWork.toLowerCase()}
-    
-    Want to connect? Drop me a line at ${portfolioData.personal.email}
+    Wake up Neo, The Matrix has you..  
+
+    Use the PGP key to drop me a encrypted message on any platform, that only I can read.\
+
+    here are the steps you can follow, https://chatgpt.com/share/686a92ae-3ccc-8005-8ea5-1b541ec21fc1
+
+    & here's my email, ${portfolioData.personal.email}
   `)
   }, [])
 
@@ -791,12 +791,13 @@ C6zD8tk=
 
         {/* Footer */}
         <footer className="py-12 sm:py-16 border-t border-gray-100">
-          <div className="max-w-3xl">
-            <p className="font-body text-base text-gray-600">
-              © 2025 {portfolioData.personal.name}, <i>There's always something more.</i>. 
-            </p>
-          </div>
-        </footer>
+  <div className="max-w-3xl">
+    <p className="font-body text-base text-gray-600">
+      © {new Date().getFullYear()} {portfolioData.personal.name}, <i>There's always something more.</i>.
+    </p>
+  </div>
+</footer>
+
       </div>
     </div>
   )
