@@ -21,10 +21,23 @@ import {
   Twitter,
   Instagram,
   Briefcase,
+  Clock,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
 import portfolioData from "../data/portfolio.json"
+import dynamic from 'next/dynamic'
+
+// Dynamic imports to prevent SSR issues with KaTeX
+const InlineMath = dynamic(() => import('react-katex').then(mod => ({ default: mod.InlineMath })), {
+  ssr: false,
+  loading: () => <span className="text-gray-500 italic">Loading equation...</span>
+})
+
+const BlockMath = dynamic(() => import('react-katex').then(mod => ({ default: mod.BlockMath })), {
+  ssr: false,
+  loading: () => <div className="text-gray-500 italic">Loading equation...</div>
+})
 
 export default function Portfolio() {
   const [aboutExpanded, setAboutExpanded] = useState(false)
@@ -285,12 +298,12 @@ C6zD8tk=
       {/* Content Container */}
       <div className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
         {/* Hero Section */}
-        <section className="mt-0  sm:mt-14 py-16 sm:py-24 lg:py-18">
+        <section className="mt-0 min-h-[calc(100vh-80px)] flex items-center">
           <div className="max-w-3xl">
             <h1 className="font-heading text-4xl sm:text-6xl lg:text-6xl font-normal text-gray-900 mb-8 sm:mb-12 tracking-normal">
               {portfolioData.personal.name}
             </h1>
-            <p className="font-body text-lg sm:text-xl lg:text-2xl text-gray-700 mb-8 sm:mb-12 leading-relaxed">
+            <p className="font-body text-lg sm:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 ">
               {portfolioData.personal.title}
             </p>  
 
@@ -362,13 +375,21 @@ C6zD8tk=
                 {portfolioData.about.summary}
               </p>
 
-              <button
-                onClick={() => setAboutExpanded(!aboutExpanded)}
-                className="inline-flex items-center font-body text-base text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-600 pb-1 mb-8"
-              >
-                {aboutExpanded ? "Show Less" : "About Me (Personal)"}
-                {aboutExpanded ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
-              </button>
+              <div className="flex items-center justify-between mb-8">
+                <button
+                  onClick={() => setAboutExpanded(!aboutExpanded)}
+                  className="inline-flex items-center font-body text-base text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-600 pb-1"
+                >
+                  {aboutExpanded ? "Show Less" : "About Me (Personal)"}
+                  {aboutExpanded ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
+                </button>
+                {!aboutExpanded && (
+                  <span className="flex items-center font-body text-sm text-gray-500">
+                    <Clock className="w-4 h-4 mr-1" />
+                    10 min read
+                  </span>
+                )}
+              </div>
 
               {aboutExpanded && (
                 <div className="space-y-16 sm:space-y-16">
@@ -457,6 +478,30 @@ C6zD8tk=
                       ))}
                     </div>
                   </div>
+
+                  <div>
+                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
+                      Settling
+                    </h3>
+                    <div className="space-y-6">
+                      {portfolioData.about.Settling.split("\n\n").map((paragraph: string, index: number) => (
+                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
+
+                      <div className="my-6 ">
+                        <div className="font-body text-base text-gray-700">
+                          <InlineMath math="\lim_{n \to \infty} a_n = L" />
+                        </div>
+                      </div>
+                      
+                                              <p className="font-body text-base text-gray-700 leading-relaxed">
+                          Where <span className="font-body text-base text-gray-700"><InlineMath math="a_n" /></span> represents our state at time n, and <span className="font-body text-base text-gray-700"><InlineMath math="L" /></span> is our eventual equilibrium state.
+                        </p>
+                    </div>
+                  </div>
+
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">

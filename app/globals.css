@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* KaTeX CSS */
+@import 'katex/dist/katex.min.css';
+
 body {
   font-feature-settings: "liga" 1, "kern" 1;
   text-rendering: optimizeLegibility;
@@ -227,6 +230,21 @@ button:focus-visible {
 
 p{
   font-size: 15px;
+}
+
+/* KaTeX custom styling to match portfolio theme */
+.katex {
+  font-family: inherit !important;
+  color: #374151 !important; /* text-gray-700 */
+  font-size: inherit !important;
+}
+
+.katex-display {
+  margin: 1rem 0 !important;
+}
+
+.katex .base {
+  color: inherit !important;
 }
 
 .email-copy-button:hover {
