@@ -229,9 +229,15 @@ button:focus-visible {
 }
 
 p{
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
 }
+
+ol, ul{
+  font-size: 15px;
+  font-weight: 400;
+}
+
 
 /* KaTeX custom styling to match portfolio theme */
 .katex {

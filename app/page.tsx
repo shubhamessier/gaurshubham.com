@@ -217,30 +217,27 @@ C6zD8tk=
       {/* Navigation */}
       <nav className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
         <div className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
-          <div className="relative flex items-center justify-center h-16 sm:h-20">
-            {/* Center: Logo */}
-            <div className="font-heading text-xl sm:text-xl font-normal text-gray-900">
-              SG
-            </div>
+                      <div className="relative flex items-center justify-center h-16 sm:h-20">
+              {/* Navigation Links positioned around the logo */}
+              <div className="hidden md:flex items-center space-x-12 lg:space-x-16">
+                <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
+                  About
+                </a>
+                <a href="#experience" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
+                  Experience
+                </a>
 
-            {/* Navigation Links positioned around the logo */}
-            <div className="hidden md:flex items-center absolute left-4 space-x-6 lg:space-x-8">
-              <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
-                About
-              </a>
-              <a href="#experience" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
-                Experience
-              </a>
-            </div>
+                <div className="font-heading text-xl sm:text-xl font-normal text-gray-900 mx-12 lg:mx-20">
+                  SG
+                </div>
 
-            <div className="hidden md:flex items-center absolute right-4 space-x-6 lg:space-x-8">
-              <a href="#projects" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
-                Projects
-              </a>
-              <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
-                Contact
-              </a>
-            </div>
+                <a href="#projects" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
+                  Projects
+                </a>
+                <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
+                  Contact
+                </a>
+              </div>
 
             {/* Mobile menu button */}
             <button
@@ -302,17 +299,17 @@ C6zD8tk=
       {/* Content Container */}
       <div className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
         {/* Hero Section */}
-        <section className="mt-0 h-[calc(100vh-80px)] flex items-center justify-center">
+        <section className="mt-0 h-[calc(100vh-100px)] flex items-center justify-center">
           <div className="max-w-3xl text-center">
             <h1 className="font-heading text-4xl sm:text-6xl lg:text-6xl font-normal text-gray-900 mb-8 tracking-normal">
               <i>Hey</i>, I'm {portfolioData.personal.name}
             </h1>
-            <p className="font-body text-sm sm:text-xl lg:text-xl text-gray-600 mb-8 font-normal">
+            <p className="font-body text-sm sm:text-xl lg:text-xl text-gray-600 mb-8 font-light">
             Software Engineer • AI x Security • Startups
             </p>  
 
             {/* Location and Status */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center text-gray-600 mb-8 font-body text-base space-y-4 sm:space-y-0 sm:space-x-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center text-gray-600 mb-8 font-body space-y-4 sm:space-y-0 sm:space-x-8">
               <div className="flex items-center justify-center">
                 <MapPin className="w-5 h-5 mr-3 flex-shrink-0" />
                 <span>{portfolioData.personal.location}</span>
@@ -320,8 +317,8 @@ C6zD8tk=
             </div>
 
             {/* Current Work Status */}
-            <div className="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
-              <p className="font-body text-base text-gray-700">
+            <div className="mb-8 p-4 bg-gray-50 rounded-lg  border-gray-200">
+              <p className="font-body  text-gray-700">
                 <span className="font-medium">Currently:</span> {currentStatus.currentWork}
               </p>
             </div>
@@ -367,7 +364,7 @@ C6zD8tk=
           <div className="max-w-[1140px] mx-auto px-6 md:px-12">
             <div className="max-w-3xl">
               <h2 className="font-heading text-xl sm:text-3xl font-normal text-gray-900 mb-8 sm:mb-12">About</h2>
-              <p className="font-body text-base text-gray-700 leading-relaxed mb-8 sm:mb-12 font-light">
+              <p className="font-body text-base text-gray-700 leading-relaxed mb-8 sm:mb-12 font-normal">
                 {portfolioData.about.summary}
               </p>
 
@@ -385,7 +382,7 @@ C6zD8tk=
                     10 min read
                   </span>
                 )}
-              </div>
+              </div>  
 
               {aboutExpanded && (
                 <div className="space-y-16 sm:space-y-16">
@@ -395,7 +392,7 @@ C6zD8tk=
                     </h3>
                     <div className="space-y-6">
                       {portfolioData.about.whoAmI.split("\n\n").map((paragraph, index) => (
-                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-light">
+                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-normal">
                           {paragraph}
                         </p>
                       ))}
@@ -404,34 +401,34 @@ C6zD8tk=
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">I like living alone.</h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed font-light">
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
                       {portfolioData.about.alone}
                     </p>
                   </div>
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">Entropy & Life</h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed font-light">
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
                       {portfolioData.about.philosophy}
                     </p>
                   </div>
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">Reading List</h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed mb-6 font-light">
+                    <p className="font-body text-base text-gray-700 leading-relaxed mb-6 font-normal">
                       Here are some of the books that have made the most impact on me:
                     </p>
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         {portfolioData.readingList.slice(0, 4).map((book, index) => (
-                          <p key={index} className="font-body text-base text-gray-700 font-light">
+                          <p key={index} className="font-body text-base text-gray-700 font-normal">
                             <em>{book.title}</em> — {book.author}
                           </p>
                         ))}
                       </div>
                       <div className="space-y-2">
                         {portfolioData.readingList.slice(4).map((book, index) => (
-                          <p key={index} className="font-body text-base text-gray-700 font-light">
+                          <p key={index} className="font-body text-base text-gray-700 font-normal">
                             <em>{book.title}</em> — {book.author}
                           </p>
                         ))}
@@ -441,7 +438,7 @@ C6zD8tk=
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">Technology</h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed font-light">
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
                       {portfolioData.about.technology}
                     </p>
                   </div>
@@ -481,7 +478,7 @@ C6zD8tk=
                     </h3>
                     <div className="space-y-6">
                       {portfolioData.about.Settling.split("\n\n").map((paragraph: string, index: number) => (
-                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-light">
+                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-normal">
                           {paragraph}
                         </p>
                       ))}
@@ -492,8 +489,8 @@ C6zD8tk=
                         </div>
                       </div>
                       
-                                              <p className="font-body text-base text-gray-700 leading-relaxed font-light">
-                          Where <span className="font-body text-base text-gray-700 font-light"><InlineMath math="a_n" /></span> represents our state at time n, and <span className="font-body text-base text-gray-700 font-light"><InlineMath math="L" /></span> is our eventual equilibrium state.
+                                              <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
+                          Where <span className="font-body text-base text-gray-700 font-normal"><InlineMath math="a_n" /></span> represents our state at time n, and <span className="font-body text-base text-gray-700 font-normal"><InlineMath math="L" /></span> is our eventual equilibrium state.
                         </p>
                     </div>
                   </div>
@@ -503,7 +500,7 @@ C6zD8tk=
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
                       Questions? Thoughts?
                     </h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed">
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
                       Heya Stranger, I love talking to people, and I write back to every mail. you can write me{" "}
                       <a
                         href={`mailto:${portfolioData.personal.email}`}
@@ -650,31 +647,31 @@ C6zD8tk=
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-4 sm:mb-6">
                       Languages
                     </h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed">
-                      {portfolioData.skills.languages}
-                    </p>
+                                      <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
+                    {portfolioData.skills.languages}
+                  </p>
                   </div>
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-4 sm:mb-6">
                       Web & App Development
                     </h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed">
-                      {portfolioData.skills.webDevelopment}
-                    </p>
+                                      <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
+                    {portfolioData.skills.webDevelopment}
+                  </p>
                   </div>
                 </div>
                 <div className="space-y-8 sm:space-y-12">
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-4 sm:mb-6">ML & AI</h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed">{portfolioData.skills.mlAi}</p>
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal">{portfolioData.skills.mlAi}</p>
                   </div>
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-4 sm:mb-6">
                       Tools & Cloud
                     </h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed">
-                      {portfolioData.skills.toolsCloud}
-                    </p>
+                                      <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
+                    {portfolioData.skills.toolsCloud}
+                  </p>
                   </div>
                 </div>
               </div>
@@ -711,7 +708,7 @@ C6zD8tk=
                     </div>
                   </div>
 
-                  <p className="font-body text-base text-gray-700 leading-relaxed mb-4">{project.description}</p>
+                  <p className="font-body text-base text-gray-700 leading-relaxed mb-4 font-normal">{project.description}</p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">
@@ -750,7 +747,7 @@ C6zD8tk=
                         <em>{portfolioData.education.institution}</em>
                       </a>
                     </h3>
-                    <p className="font-body text-base text-gray-700 mb-2">{portfolioData.education.degree}</p>
+                    <p className="font-body text-base text-gray-700 mb-2 font-normal">{portfolioData.education.degree}</p>
                     <p className="font-body text-sm text-gray-600">{portfolioData.education.period}</p>
                   </div>
                 </div>
@@ -761,7 +758,7 @@ C6zD8tk=
                   <div className="space-y-6 sm:space-y-8">
                     {portfolioData.achievements.map((achievement, index) => (
                       <div key={index}>
-                        <p className="font-body text-base text-gray-700 leading-relaxed">{achievement}</p>
+                        <p className="font-body text-base text-gray-700 leading-relaxed font-normal">{achievement}</p>
                       </div>
                     ))}
                   </div>
@@ -777,7 +774,7 @@ C6zD8tk=
     <h2 className="font-heading text-2xl sm:text-3xl font-normal text-gray-900 mb-8 sm:mb-12">
       Let's Work Together
     </h2>
-    <p className="font-body text-base text-gray-700 mb-12 sm:mb-16 leading-relaxed">
+    <p className="font-body text-base text-gray-700 mb-12 sm:mb-16 leading-relaxed font-normal">
       I'm always looking to meet new people, discuss ideas, or just chat over a chai/coffee. At the end everybody wants a little more spontaneity/entropy in their life isn't it?
     </p>
 
@@ -833,7 +830,7 @@ C6zD8tk=
         {/* Footer */}
         <footer className="py-12 sm:py-16 border-t border-gray-100">
   <div className="max-w-3xl">
-    <p className="font-body text-base text-gray-600">
+    <p className="font-body text-base text-gray-600 font-normal">
       © {new Date().getFullYear()} {portfolioData.personal.name}, <i>There's always something more.</i>.
     </p>
   </div>
