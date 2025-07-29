@@ -24,6 +24,7 @@ import {
   Clock,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { AuroraText } from "@/components/magicui/aurora-text";
 import { useState, useEffect } from "react"
 import portfolioData from "../data/portfolio.json"
 import dynamic from 'next/dynamic'
@@ -214,20 +215,21 @@ C6zD8tk=
         </div>
       )}
 
-      {/* Navigation */}
-      <nav className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
-        <div className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
-                      <div className="relative flex items-center justify-center h-16 sm:h-20">
-              {/* Navigation Links positioned around the logo */}
-              <div className="hidden md:flex items-center space-x-12 lg:space-x-16">
+            {/* Navigation */}
+      <nav className="sticky top-0 z-50 flex justify-center pt-4">
+                <div className="bg-gray/60 backdrop-blur-md border border-gray-200/30 rounded-full px-12 py-4 shadow-lg">
+          <div className="relative flex items-center justify-center h-14">
+            {/* Navigation Links positioned around the logo */}
+            <div className="hidden md:flex items-center space-x-16 lg:space-x-20">
                 <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
                   About
+                  
                 </a>
                 <a href="#experience" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
                   Experience
                 </a>
 
-                <div className="font-heading text-xl sm:text-xl font-normal text-gray-900 mx-12 lg:mx-20">
+                <div className="font-heading text-xl sm:text-xl font-normal text-gray-900 mx-16 lg:mx-24">
                   SG
                 </div>
 
@@ -299,12 +301,13 @@ C6zD8tk=
       {/* Content Container */}
       <div className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
         {/* Hero Section */}
-        <section className="mt-0 h-[calc(100vh-100px)] flex items-center justify-center">
+        <section className="mt-0 h-[calc(100vh-140px)] flex items-center justify-center">
           <div className="max-w-3xl text-center">
-            <h1 className="font-heading text-4xl sm:text-6xl lg:text-6xl font-normal text-gray-900 mb-8 tracking-normal">
-              <i>Hey</i>, I'm {portfolioData.personal.name}
+
+            <h1 className="font-heading text-4xl sm:text-6xl lg:text-6xl font-light text-gray-900 mb-8 tracking-normal">
+              Hey, I'm {portfolioData.personal.name}
             </h1>
-            <p className="font-body text-sm sm:text-xl lg:text-xl text-gray-600 mb-8 font-light">
+            <p className="font-body text-sm sm:text-xl lg:text-xl text-gray-600 mb-8 font-normal">
             Software Engineer • AI x Security • Startups
             </p>  
 
@@ -364,7 +367,7 @@ C6zD8tk=
           <div className="max-w-[1140px] mx-auto px-6 md:px-12">
             <div className="max-w-3xl">
               <h2 className="font-heading text-xl sm:text-3xl font-normal text-gray-900 mb-8 sm:mb-12">About</h2>
-              <p className="font-body text-base text-gray-700 leading-relaxed mb-8 sm:mb-12 font-normal">
+              <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-8 sm:mb-12">
                 {portfolioData.about.summary}
               </p>
 
@@ -401,6 +404,7 @@ C6zD8tk=
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">I like living alone.</h3>
+
                     <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
                       {portfolioData.about.alone}
                     </p>
@@ -415,20 +419,20 @@ C6zD8tk=
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">Reading List</h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed mb-6 font-normal">
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-6">
                       Here are some of the books that have made the most impact on me:
                     </p>
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         {portfolioData.readingList.slice(0, 4).map((book, index) => (
-                          <p key={index} className="font-body text-base text-gray-700 font-normal">
+                          <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-normal">
                             <em>{book.title}</em> — {book.author}
                           </p>
                         ))}
                       </div>
                       <div className="space-y-2">
                         {portfolioData.readingList.slice(4).map((book, index) => (
-                          <p key={index} className="font-body text-base text-gray-700 font-normal">
+                          <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-normal">
                             <em>{book.title}</em> — {book.author}
                           </p>
                         ))}
@@ -465,7 +469,7 @@ C6zD8tk=
                     </h3>
                     <div className="space-y-6">
                       {portfolioData.about.stability.split("\n\n").map((paragraph, index) => (
-                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed">
+                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-normal">
                           {paragraph}
                         </p>
                       ))}
@@ -517,7 +521,7 @@ C6zD8tk=
               {/* Connect Section */}
               <div className="mt-12 sm:mt-16">
                 <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6 sm:mb-8">Socials</h3>
-                <p className="font-body text-base text-gray-700 mb-4 sm:mb-8 leading-relaxed">
+                <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-4 sm:mb-8">
      You can reach out to me on my socials, my email having the fastest response timing.
     </p>
                 <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
@@ -598,34 +602,34 @@ C6zD8tk=
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                     <div className="flex-1">
                       <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-1">{job.title}</h3>
-                      <p className="font-body text-base text-gray-600 italic mb-2">
-                        {job.companyUrl ? (
-                          <a
-                            href={job.companyUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-gray-900 transition-colors underline decoration-dotted"
-                          >
-                            {job.company}
-                          </a>
-                        ) : (
-                          job.company
-                        )}
-                      </p>
+                                          <p className="font-body text-base text-gray-700 leading-relaxed font-normal italic mb-2">
+                      {job.companyUrl ? (
+                        <a
+                          href={job.companyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-gray-900 transition-colors underline decoration-dotted"
+                        >
+                          {job.company}
+                        </a>
+                      ) : (
+                        job.company
+                      )}
+                    </p>
                       <p className="font-body text-sm text-gray-500 lg:hidden">
                         {job.period} • {job.location}
                       </p>
                     </div>
                     <div className="hidden lg:block text-right flex-shrink-0 ml-8">
-                      <p className="font-body text-base text-gray-600 mb-1">{job.period}</p>
+                      <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-1">{job.period}</p>
                       <p className="font-body text-sm text-gray-500">{job.location}</p>
                     </div>
                   </div>
                   <div className="space-y-3 pl-0 lg:pl-4 border-l-0 lg:border-l-2 border-gray-100">
                     {job.responsibilities.map((responsibility, respIndex) => (
-                      <p key={respIndex} className="font-body text-base text-gray-700 leading-relaxed">
-                        • {responsibility}
-                      </p>
+                                          <p key={respIndex} className="font-body text-base text-gray-700 leading-relaxed font-normal">
+                      • {responsibility}
+                    </p>
                     ))}
                   </div>
                 </div>
@@ -715,7 +719,7 @@ C6zD8tk=
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="inline-flex items-center px-3 py-1 rounded-full text-sm font-body bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                        className="inline-flex items-center px-3 py-1 rounded-full text-sm font-body bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors"
                       >
                         {tag}
                       </span>
@@ -747,7 +751,7 @@ C6zD8tk=
                         <em>{portfolioData.education.institution}</em>
                       </a>
                     </h3>
-                    <p className="font-body text-base text-gray-700 mb-2 font-normal">{portfolioData.education.degree}</p>
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-2">{portfolioData.education.degree}</p>
                     <p className="font-body text-sm text-gray-600">{portfolioData.education.period}</p>
                   </div>
                 </div>
@@ -774,7 +778,7 @@ C6zD8tk=
     <h2 className="font-heading text-2xl sm:text-3xl font-normal text-gray-900 mb-8 sm:mb-12">
       Let's Work Together
     </h2>
-    <p className="font-body text-base text-gray-700 mb-12 sm:mb-16 leading-relaxed font-normal">
+    <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-12 sm:mb-16">
       I'm always looking to meet new people, discuss ideas, or just chat over a chai/coffee. At the end everybody wants a little more spontaneity/entropy in their life isn't it?
     </p>
 
@@ -830,8 +834,8 @@ C6zD8tk=
         {/* Footer */}
         <footer className="py-12 sm:py-16 border-t border-gray-100">
   <div className="max-w-3xl">
-    <p className="font-body text-base text-gray-600 font-normal">
-      © {new Date().getFullYear()} {portfolioData.personal.name}, <i>There's always something more.</i>.
+    <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
+      © {new Date().getFullYear()} {portfolioData.personal.name} Gaur, <i>There's always something more.</i>.
     </p>
   </div>
 </footer>
