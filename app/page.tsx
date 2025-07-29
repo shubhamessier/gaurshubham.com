@@ -217,19 +217,23 @@ C6zD8tk=
       {/* Navigation */}
       <nav className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
         <div className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
-          <div className="flex items-center justify-between h-16 sm:h-20">
+          <div className="relative flex items-center justify-center h-16 sm:h-20">
+            {/* Center: Logo */}
             <div className="font-heading text-xl sm:text-xl font-normal text-gray-900">
               SG
             </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            {/* Navigation Links positioned around the logo */}
+            <div className="hidden md:flex items-center absolute left-4 space-x-6 lg:space-x-8">
               <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
                 About
               </a>
               <a href="#experience" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
                 Experience
               </a>
+            </div>
+
+            <div className="hidden md:flex items-center absolute right-4 space-x-6 lg:space-x-8">
               <a href="#projects" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
                 Projects
               </a>
@@ -240,7 +244,7 @@ C6zD8tk=
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
+              className="md:hidden absolute right-0 p-2 rounded-md hover:bg-gray-100 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -298,40 +302,32 @@ C6zD8tk=
       {/* Content Container */}
       <div className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
         {/* Hero Section */}
-        <section className="mt-0 min-h-[calc(100vh-80px)] flex items-center">
-          <div className="max-w-3xl">
-            <h1 className="font-heading text-4xl sm:text-6xl lg:text-6xl font-normal text-gray-900 mb-8 sm:mb-12 tracking-normal">
-              {portfolioData.personal.name}
+        <section className="mt-0 h-[calc(100vh-80px)] flex items-center justify-center">
+          <div className="max-w-3xl text-center">
+            <h1 className="font-heading text-4xl sm:text-6xl lg:text-6xl font-normal text-gray-900 mb-8 tracking-normal">
+              <i>Hey</i>, I'm {portfolioData.personal.name}
             </h1>
-            <p className="font-body text-lg sm:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 ">
-              {portfolioData.personal.title}
+            <p className="font-body text-sm sm:text-xl lg:text-xl text-gray-600 mb-8 font-normal">
+            Software Engineer • AI x Security • Startups
             </p>  
 
             {/* Location and Status */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-gray-600 mb-12 sm:mb-16 font-body text-base space-y-6 sm:space-y-0">
-              <div className="flex items-center">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center text-gray-600 mb-8 font-body text-base space-y-4 sm:space-y-0 sm:space-x-8">
+              <div className="flex items-center justify-center">
                 <MapPin className="w-5 h-5 mr-3 flex-shrink-0" />
                 <span>{portfolioData.personal.location}</span>
-              </div>
-
-              {/* Live Status */}
-              <div className="flex items-center space-x-3 bg-green-50 mt-4 px-4 py-2 rounded-full border border-green-200 w-fit">
-                <div className="flex items-center space-x-2">
-                  <Circle className="w-3 h-3 fill-green-500 text-green-500 animate-pulse flex-shrink-0" />
-                  <span className="text-sm font-medium text-green-700">{currentStatus.availability}</span>
-                </div>
               </div>
             </div>
 
             {/* Current Work Status */}
-            <div className="mb-8 sm:mb-12 p-4 bg-gray-50 rounded-lg border-gray-900">
+            <div className="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
               <p className="font-body text-base text-gray-700">
                 <span className="font-medium">Currently:</span> {currentStatus.currentWork}
               </p>
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
   <a href="#experience" className="w-full sm:w-auto">
     <Button
       className="w-full sm:min-w-[160px] flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
@@ -371,7 +367,7 @@ C6zD8tk=
           <div className="max-w-[1140px] mx-auto px-6 md:px-12">
             <div className="max-w-3xl">
               <h2 className="font-heading text-xl sm:text-3xl font-normal text-gray-900 mb-8 sm:mb-12">About</h2>
-              <p className="font-body text-base text-gray-700 leading-relaxed mb-8 sm:mb-12">
+              <p className="font-body text-base text-gray-700 leading-relaxed mb-8 sm:mb-12 font-light">
                 {portfolioData.about.summary}
               </p>
 
@@ -399,7 +395,7 @@ C6zD8tk=
                     </h3>
                     <div className="space-y-6">
                       {portfolioData.about.whoAmI.split("\n\n").map((paragraph, index) => (
-                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed">
+                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-light">
                           {paragraph}
                         </p>
                       ))}
@@ -408,34 +404,34 @@ C6zD8tk=
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">I like living alone.</h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed">
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-light">
                       {portfolioData.about.alone}
                     </p>
                   </div>
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">Entropy & Life</h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed">
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-light">
                       {portfolioData.about.philosophy}
                     </p>
                   </div>
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">Reading List</h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed mb-6">
+                    <p className="font-body text-base text-gray-700 leading-relaxed mb-6 font-light">
                       Here are some of the books that have made the most impact on me:
                     </p>
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         {portfolioData.readingList.slice(0, 4).map((book, index) => (
-                          <p key={index} className="font-body text-base text-gray-700">
+                          <p key={index} className="font-body text-base text-gray-700 font-light">
                             <em>{book.title}</em> — {book.author}
                           </p>
                         ))}
                       </div>
                       <div className="space-y-2">
                         {portfolioData.readingList.slice(4).map((book, index) => (
-                          <p key={index} className="font-body text-base text-gray-700">
+                          <p key={index} className="font-body text-base text-gray-700 font-light">
                             <em>{book.title}</em> — {book.author}
                           </p>
                         ))}
@@ -445,7 +441,7 @@ C6zD8tk=
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">Technology</h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed">
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-light">
                       {portfolioData.about.technology}
                     </p>
                   </div>
@@ -485,7 +481,7 @@ C6zD8tk=
                     </h3>
                     <div className="space-y-6">
                       {portfolioData.about.Settling.split("\n\n").map((paragraph: string, index: number) => (
-                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed">
+                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-light">
                           {paragraph}
                         </p>
                       ))}
@@ -496,8 +492,8 @@ C6zD8tk=
                         </div>
                       </div>
                       
-                                              <p className="font-body text-base text-gray-700 leading-relaxed">
-                          Where <span className="font-body text-base text-gray-700"><InlineMath math="a_n" /></span> represents our state at time n, and <span className="font-body text-base text-gray-700"><InlineMath math="L" /></span> is our eventual equilibrium state.
+                                              <p className="font-body text-base text-gray-700 leading-relaxed font-light">
+                          Where <span className="font-body text-base text-gray-700 font-light"><InlineMath math="a_n" /></span> represents our state at time n, and <span className="font-body text-base text-gray-700 font-light"><InlineMath math="L" /></span> is our eventual equilibrium state.
                         </p>
                     </div>
                   </div>
@@ -642,8 +638,8 @@ C6zD8tk=
         </section>
 
         {/* Technical Skills Section */}
-        <section className="py-16 sm:py-24 lg:py-32 bg-gray-50 -mx-6 md:-mx-12">
-          <div className="max-w-[1140px] mx-auto px-6 md:px-12">
+        <section className="h-screen bg-gray-50 -mx-6 md:-mx-12 flex items-center">
+          <div className="max-w-[1140px] mx-auto px-6 md:px-12 w-full">
             <div className="max-w-3xl">
               <h2 className="font-heading text-2xl sm:text-3xl font-normal text-gray-900 mb-12 sm:mb-16 lg:mb-20">
                 Technical Skills
@@ -703,9 +699,9 @@ C6zD8tk=
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-gray-700 transition-colors underline decoration-dotted"
+                            className="hover:text-gray-700 transition-colors "
                           >
-                            <em>{project.title}</em>
+                            {project.title}
                           </a>
                         ) : (
                           <em>{project.title}</em>

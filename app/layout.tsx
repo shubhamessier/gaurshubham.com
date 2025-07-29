@@ -1,24 +1,24 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Old_Standard_TT, Crimson_Text } from "next/font/google"
+import { EB_Garamond, Inter } from "next/font/google"
 import "./globals.css"
 
-// Initialize the Old Standard TT font for headings
-const oldStandard = Old_Standard_TT({
-  weight: ["400", "700"],
+// Initialize EB Garamond for headings
+const ebGaramond = EB_Garamond({
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-old-standard",
+  variable: "--font-eb-garamond",
 })
 
-// Initialize Crimson Text for body content
-const crimsonText = Crimson_Text({
-  weight: ["400", "600"],
-  style: ["normal", "italic"],
+// Initialize Inter for body content (similar to Geist Sans)
+const inter = Inter({
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal"],
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-crimson",
+  variable: "--font-inter",
 })
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${oldStandard.variable} ${crimsonText.variable}`}>
+    <html lang="en" className={`${ebGaramond.variable} ${inter.variable}`}>
       <body className="antialiased font-body">{children}</body>
     </html>
   )
