@@ -12,9 +12,9 @@
     "instagram": "https://instagram.com/shubham.git",
     "resume":"https://drive.google.com/file/d/1nrffYR4MkpkcX-ObwCUNItrSlkyWKCCO/view?usp=sharing"
   },
-  "status": {
-    "availability": "Building Meetster.",
-    "currentWork": "Away from the grid."
+  "currentStatus": {
+    "currentlyListening": "Time by Pink Floyd.",
+    "currentlyReading": "Hackers & Painters by Paul Graham."
   },
   "about": {
     "summary": "Software Developer with expertise in AI/ML, reinforcement learning, and secure scalable system design. I've delivered products and services for cybersecurity, production tools, and research. Currently working on AI Compliance systems and finding my next interest.",

@@ -22,6 +22,7 @@ import {
   Instagram,
   Briefcase,
   Clock,
+  Music,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { AuroraText } from "@/components/magicui/aurora-text";
@@ -47,8 +48,8 @@ export default function Portfolio() {
   const [easterEggActive, setEasterEggActive] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [currentStatus, setCurrentStatus] = useState({
-    availability: portfolioData.status.availability,
-    currentWork: portfolioData.status.currentWork,
+    availability: "Available for new opportunities",
+    currentWork: "AI Compliance systems at Solsphere AI",
     lastUpdated: new Date(),
   })
 
@@ -316,7 +317,7 @@ C6zD8tk=
           <div className="max-w-3xl text-center">
 
             <h1 className="font-heading text-4xl sm:text-6xl lg:text-6xl font-light text-gray-900 mb-8 tracking-normal">
-              Hey, I'm {portfolioData.personal.name}
+              <i>Hey</i>, I'm {portfolioData.personal.name}
             </h1>
             <p className="font-body text-sm sm:text-xl lg:text-xl text-gray-600 mb-8 font-normal">
             Software Engineer • AI x Security • Startups
@@ -330,11 +331,25 @@ C6zD8tk=
               </div>
             </div>
 
-            {/* Current Work Status */}
-            <div className="mb-8 p-4 bg-gray-50 rounded-lg  border-gray-200">
-              <p className="font-body  text-gray-700">
-                <span className="font-medium">Currently:</span> {currentStatus.currentWork}
-              </p>
+          
+
+              <div className="flex flex-col gap-4 justify-center mb-8 p-4 bg-gray-50 rounded-lg">
+              {/* <p className="font-body text-sm font-medium text-gray-600 text-center mb-4">Currently: </p> */}
+              
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+                <div className="flex items-center justify-center">
+                  <Music className="w-4 h-4 mr-2 text-gray-600" />
+                  <p className="font-body text-gray-700">
+                    <span className="font-medium"></span> {portfolioData.currentStatus.currentlyListening}
+                  </p>
+                </div>
+                <div className="flex items-center justify-center">
+                  <BookOpen className="w-4 h-4 mr-2 text-gray-600" />
+                  <p className="font-body text-gray-700">
+                    <span className="font-medium"></span> {portfolioData.currentStatus.currentlyReading}
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Action Buttons */}
