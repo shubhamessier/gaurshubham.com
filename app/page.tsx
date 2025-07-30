@@ -216,14 +216,14 @@ C6zD8tk=
       )}
 
             {/* Navigation */}
-      <nav className="sticky top-0 z-50 flex justify-center pt-4">
-                <div className="bg-gray/60 backdrop-blur-md border border-gray-200/30 rounded-full px-12 py-4 shadow-lg">
-          <div className="relative flex items-center justify-center h-14">
-            {/* Navigation Links positioned around the logo */}
-            <div className="hidden md:flex items-center space-x-16 lg:space-x-20">
+      <nav className="sticky top-0 z-50">
+        {/* Desktop Navigation - Pill Design */}
+        <div className="hidden md:flex justify-center pt-4">
+          <div className="bg-[#dddddd77] backdrop-blur-[24px] border border-gray-200/30 rounded-full px-12 py-4 shadow-lg">
+            <div className="relative flex items-center justify-center h-10">
+              <div className="hidden md:flex items-center space-x-16 lg:space-x-20">
                 <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
                   About
-                  
                 </a>
                 <a href="#experience" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
                   Experience
@@ -240,61 +240,72 @@ C6zD8tk=
                   Contact
                 </a>
               </div>
-
-            {/* Mobile menu button */}
-            <button
-              className="md:hidden absolute right-0 p-2 rounded-md hover:bg-gray-100 transition-colors"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-
-          {/* Mobile Navigation */}
-          {mobileMenuOpen && (
-            <div className="md:hidden border-t border-gray-100 py-4">
-              <div className="flex flex-col space-y-4">
-                <a
-                  href="#about"
-                  className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base px-2 py-1"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  About
-                </a>
-                <a
-                  href="#experience"
-                  className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base px-2 py-1"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Experience
-                </a>
-                <a
-                  href="#projects"
-                  className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base px-2 py-1"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Projects
-                </a>
-                <a
-                  href="#contact"
-                  className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base px-2 py-1"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Contact
-                </a>
-                <a href={portfolioData.personal.resume}>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-gray-800 text-gray-800 hover:bg-gray-50 bg-transparent font-body text-sm px-4 py-2 w-fit"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Resume
-                </Button>
-                </a>
-              </div>
             </div>
-          )}
+          </div>
+        </div>
+
+        {/* Mobile Navigation - Simple Design */}
+        <div className="md:hidden bg-white/95 backdrop-blur-sm border-b border-gray-100">
+          <div className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
+            <div className="flex items-center justify-between h-16 sm:h-20">
+              {/* Logo */}
+              <div className="font-heading text-xl sm:text-xl font-normal text-gray-900">SG</div>
+
+              {/* Mobile menu button */}
+              <button
+                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
+
+            {/* Mobile Navigation Menu */}
+            {mobileMenuOpen && (
+              <div className="border-t border-gray-100 py-4">
+                <div className="flex flex-col space-y-4">
+                  <a
+                    href="#about"
+                    className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base px-2 py-1"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    About
+                  </a>
+                  <a
+                    href="#experience"
+                    className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base px-2 py-1"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Experience
+                  </a>
+                  <a
+                    href="#projects"
+                    className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base px-2 py-1"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Projects
+                  </a>
+                  <a
+                    href="#contact"
+                    className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base px-2 py-1"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Contact
+                  </a>
+                  <a href={portfolioData.personal.resume}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-gray-800 text-gray-800 hover:bg-gray-50 bg-transparent font-body text-sm px-4 py-2 w-fit"
+                    >
+                      <Download className="w-4 h-4 mr-2" />
+                      Resume
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </nav>
 
@@ -746,7 +757,7 @@ C6zD8tk=
                         href={portfolioData.education.institutionUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-gray-700 transition-colors underline decoration-dotted"
+                        className="hover:text-gray-700 transition-colors "
                       >
                         <em>{portfolioData.education.institution}</em>
                       </a>
