@@ -850,6 +850,19 @@ C6zD8tk=
     </Button>
   </div>
 
+  {/* Schedule Meeting Widget */}
+  <div className="w-full sm:w-auto">
+      <a 
+        href="https://zcal.co/shubhamgaur" 
+        className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm "
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Clock className="w-5 h-5 text-gray-500" />
+        Schedule a Meeting
+      </a>  
+  </div>
+
 </div>
 
   </div>
