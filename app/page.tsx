@@ -853,7 +853,7 @@ C6zD8tk=
   {/* Schedule Meeting Widget */}
   <div className="w-full sm:w-auto">
       <a 
-        href="https://zcal.co/shubhamgaur" 
+        href="https://cal.com/shubhamgaur" 
         className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm "
         target="_blank"
         rel="noopener noreferrer"
