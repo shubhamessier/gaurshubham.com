@@ -320,7 +320,7 @@ C6zD8tk=
               <i>Hey</i>, I'm {portfolioData.personal.name}
             </h1>
             <p className="font-body text-sm sm:text-xl lg:text-xl text-gray-600 mb-8 font-normal">
-            Quant • AI x Security • Startups
+            Defi • Quant • AI x Security 
             </p>  
 
             {/* Location and Status */}
