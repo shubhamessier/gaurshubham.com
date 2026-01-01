@@ -23,7 +23,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Shubham Gaur",
-  description: "Full-Stack Engineer specializing in AI/ML, reinforcement learning, and secure scalable system design",
+  description: "Solana Quant Engineer experienced in MEV, Arbitrage Infrastructure.",
 
 }
 
