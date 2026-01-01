@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { EB_Garamond, Inter } from "next/font/google"
 import "./globals.css"
 
-// Initialize EB Garamond for headings
+// 1. Initialize fonts
 const ebGaramond = EB_Garamond({
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
@@ -12,7 +12,6 @@ const ebGaramond = EB_Garamond({
   variable: "--font-eb-garamond",
 })
 
-// Initialize Inter for body content (similar to Geist Sans)
 const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
   style: ["normal"],
@@ -21,12 +20,13 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
+// 2. Metadata definition
 export const metadata: Metadata = {
   title: "Shubham Gaur",
   description: "Solana Quant Engineer experienced in MEV, Arbitrage Infrastructure.",
-
 }
 
+// 3. Root Layout
 export default function RootLayout({
   children,
 }: {
@@ -34,7 +34,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${ebGaramond.variable} ${inter.variable}`}>
-      <body className="antialiased font-body">{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        {children}
+      </body>
     </html>
   )
 }
