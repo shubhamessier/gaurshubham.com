@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Download,
@@ -23,68 +23,82 @@ import {
   Briefcase,
   Clock,
   Music,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { AuroraText } from "@/components/magicui/aurora-text";
-import { useState, useEffect } from "react"
-import portfolioData from "../data/portfolio.json"
-import dynamic from 'next/dynamic'
+import { useState, useEffect } from "react";
+import portfolioData from "../data/portfolio.json";
+import dynamic from "next/dynamic";
 
 // Dynamic imports to prevent SSR issues with KaTeX
-const InlineMath = dynamic(() => import('react-katex').then(mod => ({ default: mod.InlineMath })), {
-  ssr: false,
-  loading: () => <span className="text-gray-500 italic">Loading equation...</span>
-})
+const InlineMath = dynamic(
+  () => import("react-katex").then((mod) => ({ default: mod.InlineMath })),
+  {
+    ssr: false,
+    loading: () => (
+      <span className="text-gray-500 italic">Loading equation...</span>
+    ),
+  },
+);
 
-const BlockMath = dynamic(() => import('react-katex').then(mod => ({ default: mod.BlockMath })), {
-  ssr: false,
-  loading: () => <div className="text-gray-500 italic">Loading equation...</div>
-})
+const BlockMath = dynamic(
+  () => import("react-katex").then((mod) => ({ default: mod.BlockMath })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="text-gray-500 italic">Loading equation...</div>
+    ),
+  },
+);
 
 export default function Portfolio() {
-  const [aboutExpanded, setAboutExpanded] = useState(false)
-  const [copiedEmail, setCopiedEmail] = useState("")
-  const [konamiSequence, setKonamiSequence] = useState<string[]>([])
-  const [easterEggActive, setEasterEggActive] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [aboutExpanded, setAboutExpanded] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState("");
+  const [konamiSequence, setKonamiSequence] = useState<string[]>([]);
+  const [easterEggActive, setEasterEggActive] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentStatus, setCurrentStatus] = useState({
     availability: "Available for new opportunities",
     currentWork: "AI Compliance systems at Solsphere AI",
     lastUpdated: new Date(),
-  })
+  });
 
   // Add state for tracking time since last update
-  const [timeSinceUpdate, setTimeSinceUpdate] = useState("just now")
-  const [copiedPublicKey, setCopiedPublicKey] = useState(false)
+  const [timeSinceUpdate, setTimeSinceUpdate] = useState("just now");
+  const [copiedPublicKey, setCopiedPublicKey] = useState(false);
 
   // Add useEffect to update the "time since" automatically
   useEffect(() => {
     const updateTimeSince = () => {
-      const now = new Date()
-      const diffInMinutes = Math.floor((now.getTime() - currentStatus.lastUpdated.getTime()) / (1000 * 60))
+      const now = new Date();
+      const diffInMinutes = Math.floor(
+        (now.getTime() - currentStatus.lastUpdated.getTime()) / (1000 * 60),
+      );
 
       if (diffInMinutes < 1) {
-        setTimeSinceUpdate("just now")
+        setTimeSinceUpdate("just now");
       } else if (diffInMinutes < 60) {
-        setTimeSinceUpdate(`${diffInMinutes} minute${diffInMinutes === 1 ? "" : "s"} ago`)
+        setTimeSinceUpdate(
+          `${diffInMinutes} minute${diffInMinutes === 1 ? "" : "s"} ago`,
+        );
       } else if (diffInMinutes < 1440) {
         // less than 24 hours
-        const hours = Math.floor(diffInMinutes / 60)
-        setTimeSinceUpdate(`${hours} hour${hours === 1 ? "" : "s"} ago`)
+        const hours = Math.floor(diffInMinutes / 60);
+        setTimeSinceUpdate(`${hours} hour${hours === 1 ? "" : "s"} ago`);
       } else {
-        const days = Math.floor(diffInMinutes / 1440)
-        setTimeSinceUpdate(`${days} day${days === 1 ? "" : "s"} ago`)
+        const days = Math.floor(diffInMinutes / 1440);
+        setTimeSinceUpdate(`${days} day${days === 1 ? "" : "s"} ago`);
       }
-    }
+    };
 
     // Update immediately
-    updateTimeSince()
+    updateTimeSince();
 
     // Update every minute
-    const interval = setInterval(updateTimeSince, 60000)
+    const interval = setInterval(updateTimeSince, 60000);
 
-    return () => clearInterval(interval)
-  }, [currentStatus.lastUpdated])
+    return () => clearInterval(interval);
+  }, [currentStatus.lastUpdated]);
 
   // Konami Code sequence
   const konamiCode = [
@@ -96,19 +110,18 @@ export default function Portfolio() {
     "ArrowRight",
     "ArrowLeft",
     "ArrowRight",
-
-  ]
+  ];
 
   // Copy email function
   const copyEmail = async (email: string) => {
     try {
-      await navigator.clipboard.writeText(email)
-      setCopiedEmail(email)
-      setTimeout(() => setCopiedEmail(""), 2000)
+      await navigator.clipboard.writeText(email);
+      setCopiedEmail(email);
+      setTimeout(() => setCopiedEmail(""), 2000);
     } catch (err) {
-      console.log("Failed to copy email")
+      console.log("Failed to copy email");
     }
-  }
+  };
 
   // Copy public key function
   const copyPublicKey = async () => {
@@ -163,36 +176,36 @@ VoHEfPBiUVcUpIKloCm0wvhaTvUNHdetLK55BzX2OkngfHf5P6+PjbCJTBaYQgav
 zof/HsuZbYSN/c8giaGkuqcj1WU4ZTlxfHsIWQgI48Udi5qJK3uSZlNZx4a21xCI
 C6zD8tk=
 =loyZ
------END PGP PUBLIC KEY BLOCK-----`
+-----END PGP PUBLIC KEY BLOCK-----`;
 
     try {
-      await navigator.clipboard.writeText(publicKey)
-      setCopiedPublicKey(true)
-      setTimeout(() => setCopiedPublicKey(false), 3000)
+      await navigator.clipboard.writeText(publicKey);
+      setCopiedPublicKey(true);
+      setTimeout(() => setCopiedPublicKey(false), 3000);
     } catch (err) {
-      console.log("Failed to copy public key")
+      console.log("Failed to copy public key");
     }
-  }
+  };
 
   // Easter egg effects
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      const newSequence = [...konamiSequence, event.code].slice(-10)
-      setKonamiSequence(newSequence)
+      const newSequence = [...konamiSequence, event.code].slice(-10);
+      setKonamiSequence(newSequence);
 
       if (newSequence.join(",") === konamiCode.join(",")) {
-        setEasterEggActive(true)
-        document.body.style.animation = "rainbow 2s infinite"
+        setEasterEggActive(true);
+        document.body.style.animation = "rainbow 2s infinite";
         setTimeout(() => {
-          setEasterEggActive(false)
-          document.body.style.animation = ""
-        }, 5000)
+          setEasterEggActive(false);
+          document.body.style.animation = "";
+        }, 5000);
       }
-    }
+    };
 
-    window.addEventListener("keydown", handleKeyDown)
-    return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [konamiSequence])
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [konamiSequence]);
 
   // Console Easter Eggs
   useEffect(() => {
@@ -205,28 +218,36 @@ C6zD8tk=
     here are the steps you can follow, https://chatgpt.com/share/686a92ae-3ccc-8005-8ea5-1b541ec21fc1
 
     & here's my email, ${portfolioData.personal.email}
-  `)
-  }, [])
+  `);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
       {easterEggActive && (
         <div className="fixed top-4 right-4 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg shadow-lg animate-bounce">
-          <p className="font-body text-sm">🎉 Konami Code activated! You found the Easter egg!</p>
+          <p className="font-body text-sm">
+            🎉 Konami Code activated! You found the Easter egg!
+          </p>
         </div>
       )}
 
-            {/* Navigation */}
+      {/* Navigation */}
       <nav className="sticky top-0 z-50">
         {/* Desktop Navigation - Pill Design */}
         <div className="hidden md:flex justify-center pt-4">
           <div className="bg-[#dddddd77] backdrop-blur-[24px] border border-gray-200/30 rounded-full px-12 py-4 shadow-lg">
             <div className="relative flex items-center justify-center h-10">
               <div className="hidden md:flex items-center space-x-16 lg:space-x-20">
-                <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
+                <a
+                  href="#about"
+                  className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base"
+                >
                   About
                 </a>
-                <a href="#experience" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
+                <a
+                  href="#experience"
+                  className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base"
+                >
                   Experience
                 </a>
 
@@ -234,10 +255,16 @@ C6zD8tk=
                   SG
                 </div>
 
-                <a href="#projects" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
+                <a
+                  href="#projects"
+                  className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base"
+                >
                   Projects
                 </a>
-                <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base">
+                <a
+                  href="#contact"
+                  className="text-gray-600 hover:text-gray-900 transition-colors font-body text-base"
+                >
                   Contact
                 </a>
               </div>
@@ -250,14 +277,20 @@ C6zD8tk=
           <div className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
             <div className="flex items-center justify-between h-16 sm:h-20">
               {/* Logo */}
-              <div className="font-heading text-xl sm:text-xl font-normal text-gray-900">SG</div>
+              <div className="font-heading text-xl sm:text-xl font-normal text-gray-900">
+                SG
+              </div>
 
               {/* Mobile menu button */}
               <button
                 className="p-2 rounded-md hover:bg-gray-100 transition-colors"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
               </button>
             </div>
 
@@ -315,13 +348,12 @@ C6zD8tk=
         {/* Hero Section */}
         <section className="mt-0 h-[calc(100vh-140px)] flex items-center justify-center">
           <div className="max-w-3xl text-center">
-
             <h1 className="font-heading text-4xl sm:text-6xl lg:text-6xl font-light text-gray-900 mb-8 tracking-normal">
               <i>Hey</i>, I'm {portfolioData.personal.name}
             </h1>
             <p className="font-body text-sm sm:text-xl lg:text-xl text-gray-600 mb-8 font-normal">
-            Defi • Quant • AI x Security 
-            </p>  
+              Defi • Quant • AI x Security
+            </p>
 
             {/* Location and Status */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center text-gray-600 mb-8 font-body space-y-4 sm:space-y-0 sm:space-x-8">
@@ -331,68 +363,51 @@ C6zD8tk=
               </div>
             </div>
 
-          
+              {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+              <a href="#experience" className="w-full sm:w-auto">
+                <Button className="w-full sm:min-w-[160px] flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm">
+                  <Briefcase className="w-5 h-5" />
+                  My Work
+                </Button>
+              </a>
 
-              <div className="flex flex-col gap-4 justify-center mb-8 p-4 bg-gray-50 rounded-lg">
-              {/* <p className="font-body text-sm font-medium text-gray-600 text-center mb-4">Currently: </p> */}
-              
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-                <div className="flex items-center justify-center">
-                  <Music className="w-4 h-4 mr-2 text-gray-600" />
-                  <p className="font-body text-gray-700">
-                    <span className="font-medium"></span> {portfolioData.currentStatus.currentlyListening}
-                  </p>
-                </div>
-                <div className="flex items-center justify-center">
-                  <BookOpen className="w-4 h-4 mr-2 text-gray-600" />
-                  <p className="font-body text-gray-700">
-                    <span className="font-medium"></span> {portfolioData.currentStatus.currentlyReading}
-                  </p>
-                </div>
+              <a href="#about" className="w-full sm:w-auto">
+                <Button
+                  variant="outline"
+                  className="w-full sm:min-w-[160px] flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base font-body text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
+                >
+                  <Smile className="w-5 h-5" />
+                  About Me
+                </Button>
+              </a>
+
+              <div className="w-full sm:w-auto">
+                <Button
+                  variant="outline"
+                  className="w-full sm:min-w-[160px] flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base font-body text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
+                  onClick={() =>
+                    window.open(portfolioData.personal.blog, "_blank")
+                  }
+                >
+                  <Pen className="w-5 h-5" />
+                  Blog
+                </Button>
               </div>
             </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-  <a href="#experience" className="w-full sm:w-auto">
-    <Button
-      className="w-full sm:min-w-[160px] flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
-    >
-      <Briefcase className="w-5 h-5" />
-      My Work
-    </Button>
-  </a>
-
-  <a href="#about" className="w-full sm:w-auto">
-    <Button
-      variant="outline"
-      className="w-full sm:min-w-[160px] flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base font-body text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
-    >
-      <Smile className="w-5 h-5" />
-      About Me
-    </Button>
-  </a>
-
-  <div className="w-full sm:w-auto">
-    <Button
-      variant="outline"
-      className="w-full sm:min-w-[160px] flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base font-body text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
-      onClick={() => window.open(portfolioData.personal.blog, "_blank")}
-    >
-      <Pen className="w-5 h-5" />
-      Blog
-    </Button>
-  </div>
-</div>
-
           </div>
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-16 sm:py-24 lg:py-32 bg-gray-50 -mx-6 md:-mx-12">
+        <section
+          id="about"
+          className="py-16 sm:py-24 lg:py-32 bg-gray-50 -mx-6 md:-mx-12"
+        >
           <div className="max-w-[1140px] mx-auto px-6 md:px-12">
             <div className="max-w-3xl">
-              <h2 className="font-heading text-xl sm:text-3xl font-normal text-gray-900 mb-8 sm:mb-12">About</h2>
+              <h2 className="font-heading text-xl sm:text-3xl font-normal text-gray-900 mb-8 sm:mb-12">
+                About
+              </h2>
               <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-8 sm:mb-12">
                 {portfolioData.about.summary}
               </p>
@@ -403,7 +418,11 @@ C6zD8tk=
                   className="inline-flex items-center font-body text-base text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-600 pb-1"
                 >
                   {aboutExpanded ? "Show Less" : "About Me (Personal)"}
-                  {aboutExpanded ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
+                  {aboutExpanded ? (
+                    <ChevronUp className="w-4 h-4 ml-2" />
+                  ) : (
+                    <ChevronDown className="w-4 h-4 ml-2" />
+                  )}
                 </button>
                 {!aboutExpanded && (
                   <span className="flex items-center font-body text-sm text-gray-500">
@@ -411,7 +430,7 @@ C6zD8tk=
                     10 min read
                   </span>
                 )}
-              </div>  
+              </div>
 
               {aboutExpanded && (
                 <div className="space-y-16 sm:space-y-16">
@@ -420,16 +439,23 @@ C6zD8tk=
                       Who are you anyways?
                     </h3>
                     <div className="space-y-6">
-                      {portfolioData.about.whoAmI.split("\n\n").map((paragraph, index) => (
-                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-normal">
-                          {paragraph}
-                        </p>
-                      ))}
+                      {portfolioData.about.whoAmI
+                        .split("\n\n")
+                        .map((paragraph, index) => (
+                          <p
+                            key={index}
+                            className="font-body text-base text-gray-700 leading-relaxed font-normal"
+                          >
+                            {paragraph}
+                          </p>
+                        ))}
                     </div>
                   </div>
 
                   <div>
-                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">I like living alone.</h3>
+                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
+                      I like living alone.
+                    </h3>
 
                     <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
                       {portfolioData.about.alone}
@@ -437,37 +463,54 @@ C6zD8tk=
                   </div>
 
                   <div>
-                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">Entropy & Life</h3>
+                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
+                      Entropy & Life
+                    </h3>
                     <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
                       {portfolioData.about.philosophy}
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">Reading List</h3>
+                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
+                      Reading List
+                    </h3>
                     <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-6">
-                      Here are some of the books that have made the most impact on me:
+                      Here are some of the books that have made the most impact
+                      on me:
                     </p>
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        {portfolioData.readingList.slice(0, 4).map((book, index) => (
-                          <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-normal">
-                            <em>{book.title}</em> — {book.author}
-                          </p>
-                        ))}
+                        {portfolioData.readingList
+                          .slice(0, 4)
+                          .map((book, index) => (
+                            <p
+                              key={index}
+                              className="font-body text-base text-gray-700 leading-relaxed font-normal"
+                            >
+                              <em>{book.title}</em> — {book.author}
+                            </p>
+                          ))}
                       </div>
                       <div className="space-y-2">
-                        {portfolioData.readingList.slice(4).map((book, index) => (
-                          <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-normal">
-                            <em>{book.title}</em> — {book.author}
-                          </p>
-                        ))}
+                        {portfolioData.readingList
+                          .slice(4)
+                          .map((book, index) => (
+                            <p
+                              key={index}
+                              className="font-body text-base text-gray-700 leading-relaxed font-normal"
+                            >
+                              <em>{book.title}</em> — {book.author}
+                            </p>
+                          ))}
                       </div>
                     </div>
                   </div>
 
                   <div>
-                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">Technology</h3>
+                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
+                      Technology
+                    </h3>
                     <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
                       {portfolioData.about.technology}
                     </p>
@@ -483,7 +526,9 @@ C6zD8tk=
                           <span className="font-body text-base font-medium text-gray-900 w-full sm:w-16 mb-1 sm:mb-0">
                             {item.year}
                           </span>
-                          <span className="font-body text-base text-gray-700">{item.event}</span>
+                          <span className="font-body text-base text-gray-700">
+                            {item.event}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -494,11 +539,16 @@ C6zD8tk=
                       I don't like stability
                     </h3>
                     <div className="space-y-6">
-                      {portfolioData.about.stability.split("\n\n").map((paragraph, index) => (
-                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-normal">
-                          {paragraph}
-                        </p>
-                      ))}
+                      {portfolioData.about.stability
+                        .split("\n\n")
+                        .map((paragraph, index) => (
+                          <p
+                            key={index}
+                            className="font-body text-base text-gray-700 leading-relaxed font-normal"
+                          >
+                            {paragraph}
+                          </p>
+                        ))}
                     </div>
                   </div>
 
@@ -507,31 +557,44 @@ C6zD8tk=
                       Settling
                     </h3>
                     <div className="space-y-6">
-                      {portfolioData.about.Settling.split("\n\n").map((paragraph: string, index: number) => (
-                        <p key={index} className="font-body text-base text-gray-700 leading-relaxed font-normal">
-                          {paragraph}
-                        </p>
-                      ))}
+                      {portfolioData.about.Settling.split("\n\n").map(
+                        (paragraph: string, index: number) => (
+                          <p
+                            key={index}
+                            className="font-body text-base text-gray-700 leading-relaxed font-normal"
+                          >
+                            {paragraph}
+                          </p>
+                        ),
+                      )}
 
                       <div className="my-6 ">
                         <div className="font-body text-base text-gray-700">
                           <InlineMath math="\lim_{n \to \infty} a_n = L" />
                         </div>
                       </div>
-                      
-                                              <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
-                          Where <span className="font-body text-base text-gray-700 font-normal"><InlineMath math="a_n" /></span> represents our state at time n, and <span className="font-body text-base text-gray-700 font-normal"><InlineMath math="L" /></span> is our eventual equilibrium state.
-                        </p>
+
+                      <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
+                        Where{" "}
+                        <span className="font-body text-base text-gray-700 font-normal">
+                          <InlineMath math="a_n" />
+                        </span>{" "}
+                        represents our state at time n, and{" "}
+                        <span className="font-body text-base text-gray-700 font-normal">
+                          <InlineMath math="L" />
+                        </span>{" "}
+                        is our eventual equilibrium state.
+                      </p>
                     </div>
                   </div>
-
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
                       Questions? Thoughts?
                     </h3>
                     <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
-                      Heya Stranger, I love talking to people, and I write back to every mail. you can write me{" "}
+                      Heya Stranger, I love talking to people, and I write back
+                      to every mail. you can write me{" "}
                       <a
                         href={`mailto:${portfolioData.personal.email}`}
                         className="text-gray-900 underline hover:text-gray-700 transition-colors"
@@ -546,10 +609,13 @@ C6zD8tk=
 
               {/* Connect Section */}
               <div className="mt-12 sm:mt-16">
-                <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6 sm:mb-8">Socials</h3>
+                <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6 sm:mb-8">
+                  Socials
+                </h3>
                 <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-4 sm:mb-8">
-     You can reach out to me on my socials, my email having the fastest response timing.
-    </p>
+                  You can reach out to me on my socials, my email having the
+                  fastest response timing.
+                </p>
                 <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
                   <div className="space-y-4">
                     <div className="flex items-center justify-between group">
@@ -558,7 +624,9 @@ C6zD8tk=
                         className="flex items-center text-gray-700 hover:text-gray-900 transition-colors font-body text-base"
                       >
                         <Mail className="w-5 h-5 mr-4 flex-shrink-0" />
-                        <span className="break-all">{portfolioData.personal.email}</span>
+                        <span className="break-all">
+                          {portfolioData.personal.email}
+                        </span>
                       </a>
                       <button
                         onClick={() => copyEmail(portfolioData.personal.email)}
@@ -577,7 +645,9 @@ C6zD8tk=
                       className="flex items-center text-gray-700 hover:text-gray-900 transition-colors font-body text-base"
                     >
                       <Linkedin className="w-5 h-5 mr-4 flex-shrink-0" />
-                      <span className="break-all">linkedin.com/in/shubhamgaur10</span>
+                      <span className="break-all">
+                        linkedin.com/in/shubhamgaur10
+                      </span>
                     </a>
                     <a
                       href={portfolioData.personal.twitter}
@@ -593,7 +663,9 @@ C6zD8tk=
                       className="flex items-center text-gray-700 hover:text-gray-900 transition-colors font-body text-base"
                     >
                       <Github className="w-5 h-5 mr-4 flex-shrink-0" />
-                      <span className="break-all">github.com/shubhamessier</span>
+                      <span className="break-all">
+                        github.com/shubhamessier
+                      </span>
                     </a>
                     <a
                       href={portfolioData.personal.website}
@@ -607,7 +679,9 @@ C6zD8tk=
                       className="flex items-center text-gray-700 hover:text-gray-900 transition-colors font-body text-base"
                     >
                       <Instagram className="w-5 h-5 mr-4 flex-shrink-0" />
-                      <span className="break-all">instagram.com/shubham.git</span>
+                      <span className="break-all">
+                        instagram.com/shubham.git
+                      </span>
                     </a>
                   </div>
                 </div>
@@ -627,35 +701,44 @@ C6zD8tk=
                 <div key={index} className="group">
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                     <div className="flex-1">
-                      <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-1">{job.title}</h3>
-                                          <p className="font-body text-base text-gray-700 leading-relaxed font-normal italic mb-2">
-                      {job.companyUrl ? (
-                        <a
-                          href={job.companyUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-gray-900 transition-colors underline decoration-dotted"
-                        >
-                          {job.company}
-                        </a>
-                      ) : (
-                        job.company
-                      )}
-                    </p>
+                      <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-1">
+                        {job.title}
+                      </h3>
+                      <p className="font-body text-base text-gray-700 leading-relaxed font-normal italic mb-2">
+                        {job.companyUrl ? (
+                          <a
+                            href={job.companyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-gray-900 transition-colors underline decoration-dotted"
+                          >
+                            {job.company}
+                          </a>
+                        ) : (
+                          job.company
+                        )}
+                      </p>
                       <p className="font-body text-sm text-gray-500 lg:hidden">
                         {job.period} • {job.location}
                       </p>
                     </div>
                     <div className="hidden lg:block text-right flex-shrink-0 ml-8">
-                      <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-1">{job.period}</p>
-                      <p className="font-body text-sm text-gray-500">{job.location}</p>
+                      <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-1">
+                        {job.period}
+                      </p>
+                      <p className="font-body text-sm text-gray-500">
+                        {job.location}
+                      </p>
                     </div>
                   </div>
                   <div className="space-y-3 pl-0 lg:pl-4 border-l-0 lg:border-l-2 border-gray-100">
                     {job.responsibilities.map((responsibility, respIndex) => (
-                                          <p key={respIndex} className="font-body text-base text-gray-700 leading-relaxed font-normal">
-                      • {responsibility}
-                    </p>
+                      <p
+                        key={respIndex}
+                        className="font-body text-base text-gray-700 leading-relaxed font-normal"
+                      >
+                        • {responsibility}
+                      </p>
                     ))}
                   </div>
                 </div>
@@ -677,31 +760,35 @@ C6zD8tk=
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-4 sm:mb-6">
                       Languages
                     </h3>
-                                      <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
-                    {portfolioData.skills.languages}
-                  </p>
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
+                      {portfolioData.skills.languages}
+                    </p>
                   </div>
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-4 sm:mb-6">
                       Web & App Development
                     </h3>
-                                      <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
-                    {portfolioData.skills.webDevelopment}
-                  </p>
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
+                      {portfolioData.skills.webDevelopment}
+                    </p>
                   </div>
                 </div>
                 <div className="space-y-8 sm:space-y-12">
                   <div>
-                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-4 sm:mb-6">ML & AI</h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal">{portfolioData.skills.mlAi}</p>
+                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-4 sm:mb-6">
+                      ML & AI
+                    </h3>
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
+                      {portfolioData.skills.mlAi}
+                    </p>
                   </div>
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-4 sm:mb-6">
                       Tools & Cloud
                     </h3>
-                                      <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
-                    {portfolioData.skills.toolsCloud}
-                  </p>
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
+                      {portfolioData.skills.toolsCloud}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -734,11 +821,17 @@ C6zD8tk=
                           <em>{project.title}</em>
                         )}
                       </h3>
-                      {project.status && <p className="font-body text-sm text-gray-600 mb-3">{project.status}</p>}
+                      {project.status && (
+                        <p className="font-body text-sm text-gray-600 mb-3">
+                          {project.status}
+                        </p>
+                      )}
                     </div>
                   </div>
 
-                  <p className="font-body text-base text-gray-700 leading-relaxed mb-4 font-normal">{project.description}</p>
+                  <p className="font-body text-base text-gray-700 leading-relaxed mb-4 font-normal">
+                    {project.description}
+                  </p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">
@@ -777,8 +870,12 @@ C6zD8tk=
                         <em>{portfolioData.education.institution}</em>
                       </a>
                     </h3>
-                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-2">{portfolioData.education.degree}</p>
-                    <p className="font-body text-sm text-gray-600">{portfolioData.education.period}</p>
+                    <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-2">
+                      {portfolioData.education.degree}
+                    </p>
+                    <p className="font-body text-sm text-gray-600">
+                      {portfolioData.education.period}
+                    </p>
                   </div>
                 </div>
                 <div>
@@ -788,7 +885,9 @@ C6zD8tk=
                   <div className="space-y-6 sm:space-y-8">
                     {portfolioData.achievements.map((achievement, index) => (
                       <div key={index}>
-                        <p className="font-body text-base text-gray-700 leading-relaxed font-normal">{achievement}</p>
+                        <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
+                          {achievement}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -800,86 +899,84 @@ C6zD8tk=
 
         {/* Contact Section */}
         <section id="contact" className="py-16 sm:py-24 lg:py-32">
-  <div className="max-w-3xl">
-    <h2 className="font-heading text-2xl sm:text-3xl font-normal text-gray-900 mb-8 sm:mb-12">
-      Let's Work Together
-    </h2>
-    <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-12 sm:mb-16">
-      I'm always looking to meet new people, discuss ideas, or just chat over a chai/coffee. At the end everybody wants a little more spontaneity/entropy in their life isn't it?
-    </p>
+          <div className="max-w-3xl">
+            <h2 className="font-heading text-2xl sm:text-3xl font-normal text-gray-900 mb-8 sm:mb-12">
+              Let's Work Together
+            </h2>
+            <p className="font-body text-base text-gray-700 leading-relaxed font-normal mb-12 sm:mb-16">
+              I'm always looking to meet new people, discuss ideas, or just chat
+              over a chai/coffee. At the end everybody wants a little more
+              spontaneity/entropy in their life isn't it?
+            </p>
 
-    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start flex-wrap">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start flex-wrap">
+              {/* Download Resume Button */}
+              <a
+                href={portfolioData.personal.resume}
+                className="w-full sm:w-auto"
+              >
+                <Button className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm">
+                  <Download className="w-5 h-5" />
+                  Download Resume
+                </Button>
+              </a>
 
-  {/* Download Resume Button */}
-  <a href={portfolioData.personal.resume} className="w-full sm:w-auto">
-    <Button
-      className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
-    >
-      <Download className="w-5 h-5" />
-      Download Resume
-    </Button>
-  </a>
+              {/* Email Copy Button */}
+              <div className="w-full sm:w-auto">
+                <Button
+                  onClick={() => copyEmail(portfolioData.personal.email)}
+                  className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
+                >
+                  {copiedEmail === portfolioData.personal.email ? (
+                    <Check className="w-5 h-5 text-green-600" />
+                  ) : (
+                    <Copy className="w-5 h-5 text-gray-900" />
+                  )}
+                  Copy Email
+                </Button>
+              </div>
 
-  {/* Email Copy Button */}
-  <div className="w-full sm:w-auto">
-    <Button
-      onClick={() => copyEmail(portfolioData.personal.email)}
-      className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
-    >
-      {copiedEmail === portfolioData.personal.email ? (
-        <Check className="w-5 h-5 text-green-600" />
-      ) : (
-        <Copy className="w-5 h-5 text-gray-900" />
-      )}
-      Copy Email
-    </Button>
-  </div>
+              {/* PGP Key Copy Button */}
+              <div className="w-full sm:w-auto">
+                <Button
+                  onClick={copyPublicKey}
+                  className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
+                >
+                  {copiedPublicKey ? (
+                    <Check className="w-5 h-5 text-green-600" />
+                  ) : (
+                    <Key className="w-5 h-5 text-gray-500" />
+                  )}
+                  Copy PGP Key
+                </Button>
+              </div>
 
-  {/* PGP Key Copy Button */}
-  <div className="w-full sm:w-auto">
-    <Button
-      onClick={copyPublicKey}
-      className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm"
-    >
-      {copiedPublicKey ? (
-        <Check className="w-5 h-5 text-green-600" />
-      ) : (
-        <Key className="w-5 h-5 text-gray-500" />
-      )}
-      Copy PGP Key
-    </Button>
-  </div>
-
-  {/* Schedule Meeting Widget */}
-  <div className="w-full sm:w-auto">
-      <a 
-        href="https://cal.com/shubhamgaur" 
-        className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm "
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Clock className="w-5 h-5 text-gray-500" />
-        Schedule a Meeting
-      </a>  
-  </div>
-
-</div>
-
-  </div>
-</section>
-
-
+              {/* Schedule Meeting Widget */}
+              <div className="w-full sm:w-auto">
+                <a
+                  href="https://cal.com/shubhamgaur"
+                  className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Clock className="w-5 h-5 text-gray-500" />
+                  Schedule a Meeting
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Footer */}
         <footer className="py-12 sm:py-16 border-t border-gray-100">
-  <div className="max-w-3xl">
-    <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
-      © {new Date().getFullYear()} {portfolioData.personal.name} Gaur, <i>There's always something more.</i>.
-    </p>
-  </div>
-</footer>
-
+          <div className="max-w-3xl">
+            <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
+              © {new Date().getFullYear()} {portfolioData.personal.name} Gaur,{" "}
+              <i>There's always something more.</i>.
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
-  )
+  );
 }
