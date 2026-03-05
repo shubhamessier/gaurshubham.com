@@ -363,7 +363,7 @@ C6zD8tk=
               </div>
             </div>
 
-              {/* Action Buttons */}
+            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
               <a href="#experience" className="w-full sm:w-auto">
                 <Button className="w-full sm:min-w-[160px] flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm">
@@ -554,6 +554,24 @@ C6zD8tk=
 
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
+                      Travelling
+                    </h3>
+                    <div className="space-y-6">
+                      {portfolioData.about.travelling
+                        .split("\n\n")
+                        .map((paragraph, index) => (
+                          <p
+                            key={index}
+                            className="font-body text-base text-gray-700 leading-relaxed font-normal"
+                          >
+                            {paragraph}
+                          </p>
+                        ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
                       Settling
                     </h3>
                     <div className="space-y-6">
@@ -585,6 +603,68 @@ C6zD8tk=
                         </span>{" "}
                         is our eventual equilibrium state.
                       </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
+                      Skills & Hobbies
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {portfolioData.about.personalSkills.map(
+                        (skill: string, index: number) => (
+                          <span
+                            key={index}
+                            className="inline-flex items-center px-3 py-1 rounded-full text-sm font-body bg-gray-100 text-gray-600"
+                          >
+                            {skill}
+                          </span>
+                        ),
+                      )}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
+                      To Learn  
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {portfolioData.about.toLearn.map(
+                        (item: string, index: number) => (
+                          <span
+                            key={index}
+                            className="inline-flex items-center px-3 py-1 rounded-full text-sm font-body bg-gray-50 text-gray-600 border border-gray-100"
+                          >
+                            {item}
+                          </span>
+                        ),
+                      )}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
+                      Countries I plan to visit
+                    </h3>
+                    <div className="space-y-3">
+                      {portfolioData.about.countriesToVisit.map(
+                        (
+                          country: { name: string; visited: boolean },
+                          index: number,
+                        ) => (
+                          <div key={index} className="flex items-center">
+                            <span
+                              className={`font-body text-base ${
+                                country.visited
+                                  ? "line-through text-gray-400"
+                                  : "text-gray-900"
+                              }`}
+                            >
+                              {index + 1}. {country.name}
+                            </span>
+                          </div>
+                        ),
+                      )}
                     </div>
                   </div>
 
@@ -955,11 +1035,11 @@ C6zD8tk=
               <div className="w-full sm:w-auto">
                 <a
                   href="https://cal.com/shubhamgaur"
-                  className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm "
+                  className="w-full sm:min-w-[220px] flex items-center justify-center gap-2 px-6 py-3 text-base font-body bg-white text-gray-1500 border border-gray-300 hover:bg-gray-100 transition-colors rounded-2xl shadow-sm "
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Clock className="w-5 h-5 text-gray-500" />
+                  <Clock className="w-5 h-5 text-gray-600" />
                   Schedule a Meeting
                 </a>
               </div>
