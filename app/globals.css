@@ -5,6 +5,7 @@
 /* KaTeX CSS */
 @import 'katex/dist/katex.min.css';
 
+/* Other global styles */
 body {
   font-feature-settings: "liga" 1, "kern" 1;
   text-rendering: optimizeLegibility;
