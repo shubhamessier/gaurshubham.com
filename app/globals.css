@@ -1,13 +1,15 @@
+/* KaTeX CSS */
+@import "katex/dist/katex.min.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* KaTeX CSS */
-@import 'katex/dist/katex.min.css';
-
 /* Other global styles */
 body {
-  font-feature-settings: "liga" 1, "kern" 1;
+  font-feature-settings:
+    "liga" 1,
+    "kern" 1;
   text-rendering: optimizeLegibility;
 }
 
@@ -186,7 +188,8 @@ button:focus-visible {
 
 /* Smooth transitions for all interactive elements */
 * {
-  transition-property: color, background-color, border-color, opacity, transform;
+  transition-property:
+    color, background-color, border-color, opacity, transform;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
 }
@@ -232,12 +235,13 @@ button:focus-visible {
   flex-shrink: 0;
 }
 
-p{
+p {
   font-size: 14px;
   font-weight: 400;
 }
 
-ol, ul{
+ol,
+ul {
   font-size: 18px;
   font-weight: 400;
 }
@@ -268,25 +272,25 @@ ol, ul{
 
 @theme inline {
   @keyframes aurora {
-  0% {
-    background-position: 0% 50%;
-    transform: rotate(-5deg) scale(0.9);
+    0% {
+      background-position: 0% 50%;
+      transform: rotate(-5deg) scale(0.9);
     }
-  25% {
-    background-position: 50% 100%;
-    transform: rotate(5deg) scale(1.1);
+    25% {
+      background-position: 50% 100%;
+      transform: rotate(5deg) scale(1.1);
     }
-  50% {
-    background-position: 100% 50%;
-    transform: rotate(-3deg) scale(0.95);
+    50% {
+      background-position: 100% 50%;
+      transform: rotate(-3deg) scale(0.95);
     }
-  75% {
-    background-position: 50% 0%;
-    transform: rotate(3deg) scale(1.05);
+    75% {
+      background-position: 50% 0%;
+      transform: rotate(3deg) scale(1.05);
     }
-  100% {
-    background-position: 0% 50%;
-    transform: rotate(-5deg) scale(0.9);
+    100% {
+      background-position: 0% 50%;
+      transform: rotate(-5deg) scale(0.9);
     }
   }
 }
