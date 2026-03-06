@@ -570,6 +570,76 @@ C6zD8tk=
                     </div>
                   </div>
 
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                      <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
+                        Stats 
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        {portfolioData.about.personalSkills.map(
+                          (skill: string, index: number) => (
+                            <span
+                              key={index}
+                              className="inline-flex items-center px-3 py-1 rounded-full text-sm font-body bg-gray-100 text-gray-600"
+                            >
+                              {skill}
+                            </span>
+                          ),
+                        )}
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
+                        To Learn
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        {portfolioData.about.toLearn.map(
+                          (item: string, index: number) => (
+                            <span
+                              key={index}
+                              className="inline-flex items-center px-3 py-1 rounded-full text-sm font-body bg-gray-50 text-gray-600 border border-gray-100"
+                            >
+                              {item}
+                            </span>
+                          ),
+                        )}
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
+                        Countries I plan to visit
+                      </h3>
+                      <div className="space-y-3">
+                        {portfolioData.about.countriesToVisit.map(
+                          (
+                            country: { name: string; visited: boolean },
+                            index: number,
+                          ) => {
+                            const [flag, ...nameParts] = country.name.split(" ");
+                            return (
+                              <div key={index} className="flex items-center gap-2">
+                                <span className="font-body text-base text-gray-900">
+                                  {flag}
+                                </span>
+                                <span
+                                  className={`font-body text-base ${
+                                    country.visited
+                                      ? "line-through text-gray-400"
+                                      : "text-gray-900"
+                                  }`}
+                                >
+                                  {nameParts.join(" ")}
+                                </span>
+                              </div>
+                            );
+                          },
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
                   <div>
                     <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
                       Settling
@@ -603,68 +673,6 @@ C6zD8tk=
                         </span>{" "}
                         is our eventual equilibrium state.
                       </p>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
-                      Skills & Hobbies
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {portfolioData.about.personalSkills.map(
-                        (skill: string, index: number) => (
-                          <span
-                            key={index}
-                            className="inline-flex items-center px-3 py-1 rounded-full text-sm font-body bg-gray-100 text-gray-600"
-                          >
-                            {skill}
-                          </span>
-                        ),
-                      )}
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
-                      To Learn  
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {portfolioData.about.toLearn.map(
-                        (item: string, index: number) => (
-                          <span
-                            key={index}
-                            className="inline-flex items-center px-3 py-1 rounded-full text-sm font-body bg-gray-50 text-gray-600 border border-gray-100"
-                          >
-                            {item}
-                          </span>
-                        ),
-                      )}
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
-                      Countries I plan to visit
-                    </h3>
-                    <div className="space-y-3">
-                      {portfolioData.about.countriesToVisit.map(
-                        (
-                          country: { name: string; visited: boolean },
-                          index: number,
-                        ) => (
-                          <div key={index} className="flex items-center">
-                            <span
-                              className={`font-body text-base ${
-                                country.visited
-                                  ? "line-through text-gray-400"
-                                  : "text-gray-900"
-                              }`}
-                            >
-                              {index + 1}. {country.name}
-                            </span>
-                          </div>
-                        ),
-                      )}
                     </div>
                   </div>
 
