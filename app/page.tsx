@@ -210,7 +210,7 @@ C6zD8tk=
   // Console Easter Eggs
   useEffect(() => {
     console.log(`
-  
+
     Wake up Neo, The Matrix has you..  
 
     Use the PGP key to drop me a encrypted message on any platform, that only I can read.\
@@ -573,7 +573,7 @@ C6zD8tk=
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div>
                       <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
-                        Stats 
+                        Skills & Hobbies
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         {portfolioData.about.personalSkills.map(
@@ -591,7 +591,7 @@ C6zD8tk=
 
                     <div>
                       <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
-                        To Learn
+                        To Do
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         {portfolioData.about.toLearn.map(
@@ -617,9 +617,13 @@ C6zD8tk=
                             country: { name: string; visited: boolean },
                             index: number,
                           ) => {
-                            const [flag, ...nameParts] = country.name.split(" ");
+                            const [flag, ...nameParts] =
+                              country.name.split(" ");
                             return (
-                              <div key={index} className="flex items-center gap-2">
+                              <div
+                                key={index}
+                                className="flex items-center gap-2"
+                              >
                                 <span className="font-body text-base text-gray-900">
                                   {flag}
                                 </span>
@@ -637,42 +641,6 @@ C6zD8tk=
                           },
                         )}
                       </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="font-heading text-lg sm:text-xl font-normal text-gray-900 mb-6">
-                      Settling
-                    </h3>
-                    <div className="space-y-6">
-                      {portfolioData.about.Settling.split("\n\n").map(
-                        (paragraph: string, index: number) => (
-                          <p
-                            key={index}
-                            className="font-body text-base text-gray-700 leading-relaxed font-normal"
-                          >
-                            {paragraph}
-                          </p>
-                        ),
-                      )}
-
-                      <div className="my-6 ">
-                        <div className="font-body text-base text-gray-700">
-                          <InlineMath math="\lim_{n \to \infty} a_n = L" />
-                        </div>
-                      </div>
-
-                      <p className="font-body text-base text-gray-700 leading-relaxed font-normal">
-                        Where{" "}
-                        <span className="font-body text-base text-gray-700 font-normal">
-                          <InlineMath math="a_n" />
-                        </span>{" "}
-                        represents our state at time n, and{" "}
-                        <span className="font-body text-base text-gray-700 font-normal">
-                          <InlineMath math="L" />
-                        </span>{" "}
-                        is our eventual equilibrium state.
-                      </p>
                     </div>
                   </div>
 
