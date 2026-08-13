@@ -21,8 +21,8 @@ import {
   contactClosing,
 } from "@/data";
 
-// Feature toggle for the SitePet (pikachu) companion widget.
-const SHOW_SITE_PET = false;
+// SitePet (pikachu) companion widget - local dev only, hidden on the deployed site.
+const SHOW_SITE_PET = ["localhost", "127.0.0.1"].includes(window.location.hostname);
 
 const poke = (topic) => {
   window.dispatchEvent(new CustomEvent("sitepet:react", { detail: { topic } }));
