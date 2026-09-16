@@ -1,0 +1,21 @@
+# Shubham Gaur
+
+> Quantitative Researcher specializing in Solana market microstructure, execution systems, and on-chain data analysis. Open to quant and research roles in the US, UK, Europe, and Singapore.
+
+Quantitative Researcher specializing in Solana market microstructure, execution systems, and on-chain data analysis. Experienced in developing quantitative models, optimizing transaction execution, designing incentive mechanisms, and extracting market intelligence from large-scale blockchain datasets. Active contributor to open-source DeFi, MEV, and quantitative finance infrastructure.
+
+Focus areas: Execution, MEV, Microstructure.
+Open to opportunities in: United States, United Kingdom, Europe, Singapore.
+
+## Links
+
+- Website: https://gaurshubham.com/
+- GitHub: https://github.com/shubhamessier
+- LinkedIn: https://linkedin.com/in/shubhamgaur10
+
+## Sections
+
+- Work: https://gaurshubham.com/#work - professional experience
+- Research: https://gaurshubham.com/#research - selected projects and research
+- Personal: https://gaurshubham.com/#life - background, interests, and life
+- Contact: https://gaurshubham.com/#contact - ways to get in touch
