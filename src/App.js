@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import "@/App.css";
 import { motion, useInView } from "framer-motion";
 import { Toaster, toast } from "sonner";
@@ -58,8 +58,35 @@ const Section = ({ id, title, children }) => (
 );
 
 const Hero = () => {
+  const heroRef = useRef(null);
+
+  // Centers the hero block within the viewport once, on load/resize, by
+  // measuring only up to the "read the longer story" trigger - never the
+  // collapsible content - so opening the story can't recompute (and shift)
+  // this padding.
+  useLayoutEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
+    const trigger = hero.querySelector('[data-testid="personal-toggle"]');
+    if (!trigger) return;
+
+    const compute = () => {
+      hero.style.paddingTop = "0px";
+      const heroTop = hero.getBoundingClientRect().top;
+      const triggerBottom = trigger.getBoundingClientRect().bottom;
+      const contentHeight = triggerBottom - heroTop;
+      const viewportHeight = window.innerHeight - 60; // minus sticky nav height
+      const pad = Math.max(0, (viewportHeight - contentHeight) / 2);
+      hero.style.paddingTop = `${pad}px`;
+    };
+
+    compute();
+    window.addEventListener("resize", compute);
+    return () => window.removeEventListener("resize", compute);
+  }, []);
+
   return (
-    <header className="hero">
+    <header className="hero" ref={heroRef}>
       <div className="wrap">
         <h1 className="hero-title" data-testid="hero-heading">
           <span className="hero-title-line">Hey, I&apos;m Shubham.</span>
@@ -104,6 +131,12 @@ const Hero = () => {
             <div className="fact-value">Execution &middot; MEV &middot; Microstructure</div>
           </div>
         </div>
+
+        <div className="hero-profile">
+          <p className="lead">{about}</p>
+        </div>
+
+        <LongerStory />
       </div>
     </header>
   );
@@ -131,7 +164,6 @@ const LongerStory = () => {
           <div className="longer-story-body">
             {personal.chapters.map((c) => (
               <div className="chapter" key={c.no}>
-                <div className="chapter-no">{c.no}</div>
                 <h3>{c.title}</h3>
                 {c.body.map((p, i) => (
                   <p key={i}>{p}</p>
@@ -147,7 +179,6 @@ const LongerStory = () => {
             ))}
 
             <div className="chapter">
-              <div className="chapter-no">07</div>
               <h3>Timeline</h3>
               <div style={{ marginTop: 8 }}>
                 {personal.timeline.map((t, i) => (
@@ -160,43 +191,42 @@ const LongerStory = () => {
             </div>
 
             <div className="chapter">
-              <div className="chapter-no">08</div>
               <h3>Life</h3>
-              <dl className="life-spec">
-                <div className="life-row">
-                  <dt>Hobbies</dt>
-                  <dd>
+              <div className="life-grid">
+                <div className="life-card">
+                  <div className="life-card-label">Hobbies</div>
+                  <div className="life-card-items">
                     {personal.hobbies.map((h, i) => (
                       <span className="life-item" key={i}>
                         <span className="life-mark" aria-hidden="true">{h.icon}</span>
                         {h.label}
                       </span>
                     ))}
-                  </dd>
+                  </div>
                 </div>
-                <div className="life-row">
-                  <dt>To do</dt>
-                  <dd>
+                <div className="life-card">
+                  <div className="life-card-label">To do</div>
+                  <div className="life-card-items">
                     {personal.todo.map((h, i) => (
                       <span className="life-item" key={i}>
                         <span className="life-mark" aria-hidden="true">{h.icon}</span>
                         {h.label}
                       </span>
                     ))}
-                  </dd>
+                  </div>
                 </div>
-                <div className="life-row">
-                  <dt>To visit</dt>
-                  <dd>
+                <div className="life-card life-card-wide">
+                  <div className="life-card-label">To visit</div>
+                  <div className="life-card-items">
                     {personal.countries.map((c, i) => (
                       <span className="life-item" key={i}>
                         <span className="life-mark" aria-hidden="true">{c.flag}</span>
                         {c.name}
                       </span>
                     ))}
-                  </dd>
+                  </div>
                 </div>
-              </dl>
+              </div>
             </div>
           </div>
         </CollapsibleContent>
@@ -236,14 +266,6 @@ export default function App() {
       <div id="top" />
       <div className="opening">
         <Hero />
-
-        {/* About / positioning + longer story nested underneath */}
-        <Section id="about" title="Profile">
-          <Reveal>
-            <p className="lead">{about}</p>
-          </Reveal>
-          <LongerStory />
-        </Section>
       </div>
 
       {/* Experience */}
