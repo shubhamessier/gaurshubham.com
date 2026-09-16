@@ -68,7 +68,7 @@ export const experience = [
     role: "Quantitative Engineer",
     company: "Astralane",
     period: "Aug 2025 - Present",
-    place: "Bengaluru",
+    place: "UAE",
     points: [
       "Designed and deployed subsidy strategies to improve competitiveness in subsidy auctions, increasing transaction landing rates and top-of-block positioning across Solana validators.",
       "Optimized transaction execution infrastructure through validator-client-specific routing and delivery strategies, improving execution reliability for latency-sensitive flows.",
@@ -294,7 +294,7 @@ export const personal = {
     { flag: "🇦🇺", name: "Australia" },
     { flag: "🇧🇷", name: "Brazil" },
     { flag: "🇨🇭", name: "Switzerland" },
-    { flag: "🇱🇰", name: "Sri Lanka" },
+    { flag: "🇱🇰", name: "Sri Lanka", visited: true },
   ],
 };
 

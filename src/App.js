@@ -219,9 +219,10 @@ const LongerStory = () => {
                   <div className="life-card-label">To visit</div>
                   <div className="life-card-items">
                     {personal.countries.map((c, i) => (
-                      <span className="life-item" key={i}>
+                      <span className={`life-item${c.visited ? " life-item-visited" : ""}`} key={i}>
                         <span className="life-mark" aria-hidden="true">{c.flag}</span>
                         {c.name}
+                        {c.visited && <span className="life-check" title="Already visited">✓</span>}
                       </span>
                     ))}
                   </div>

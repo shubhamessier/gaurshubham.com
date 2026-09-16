@@ -587,6 +587,19 @@ html {
   font-size: 14px;
   line-height: 1;
 }
+.life-item-visited {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--line-2);
+}
+.life-item-visited .life-mark {
+  text-decoration: none;
+}
+.life-check {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 12px;
+}
 @media (max-width: 640px) {
   .life-grid { grid-template-columns: 1fr; }
 }
