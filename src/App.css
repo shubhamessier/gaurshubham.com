@@ -788,6 +788,11 @@ html {
   .skill-row { grid-template-columns: 1fr; gap: 6px; }
   .nav-links { gap: 14px; }
   .hero { padding: 0; }
+  .hero-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
   .hero-panel {
     flex-direction: column;
     gap: 20px;
